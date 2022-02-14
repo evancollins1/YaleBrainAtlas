@@ -15,9 +15,6 @@ output: html_document
 library(dplyr)
 library(plotly)
 library(readobj)
-library(reactable)
-library(reactablefmtr)
-library(ggseg3d)
 ```
 
 ```{r}
