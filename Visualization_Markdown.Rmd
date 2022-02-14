@@ -182,13 +182,13 @@ colors_of_int_LH <- unlist(colors_of_int_LH)
 
 ```{r}
 img4 <- plot_ly(source = "atlas_default", type = "mesh3d", customdata = rep(parcels_of_int_RH_df$parcel, vertex_number_by_parcel_of_int_RH),
-          x = deep_LH$shapes[[1]]$positions[1,],
-          y = deep_LH$shapes[[1]]$positions[3,],
-          z = deep_LH$shapes[[1]]$positions[2,],
+          x = deep_RH$shapes[[1]]$positions[1,],
+          y = deep_RH$shapes[[1]]$positions[3,],
+          z = deep_RH$shapes[[1]]$positions[2,],
           vertexcolor = colors_of_int_RH,
-          i = deep_LH$shapes[[1]]$indices[1,],
-          j = deep_LH$shapes[[1]]$indices[3,],
-          k = deep_LH$shapes[[1]]$indices[2,],
+          i = deep_RH$shapes[[1]]$indices[1,],
+          j = deep_RH$shapes[[1]]$indices[3,],
+          k = deep_RH$shapes[[1]]$indices[2,],
           hovertext = paste0("Parcel: ", rep(parcels_of_int_RH_names, vertex_number_by_parcel_of_int_RH),
                             "<br>", rep(paste0("Freq: ", parcels_of_int_RH_df$Freq), vertex_number_by_parcel_of_int_RH))) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
@@ -200,13 +200,13 @@ img4
 
 ```{r}
 img5 <- plot_ly(source = "atlas_default", type = "mesh3d", customdata = rep(parcels_of_int_LH_df$parcel, vertex_number_by_parcel_of_int_LH),
-          x = deep_RH$shapes[[1]]$positions[1,],
-          y = deep_RH$shapes[[1]]$positions[3,],
-          z = deep_RH$shapes[[1]]$positions[2,],
+          x = deep_LH$shapes[[1]]$positions[1,],
+          y = deep_LH$shapes[[1]]$positions[3,],
+          z = deep_LH$shapes[[1]]$positions[2,],
           vertexcolor = colors_of_int_LH,
-          i = deep_RH$shapes[[1]]$indices[1,],
-          j = deep_RH$shapes[[1]]$indices[3,],
-          k = deep_RH$shapes[[1]]$indices[2,],
+          i = deep_LH$shapes[[1]]$indices[1,],
+          j = deep_LH$shapes[[1]]$indices[3,],
+          k = deep_LH$shapes[[1]]$indices[2,],
           hovertext = paste0("Parcel: ", rep(parcels_of_int_LH_names, vertex_number_by_parcel_of_int_LH),
                             "<br>", rep(paste0("Freq: ", parcels_of_int_LH_df$Freq), vertex_number_by_parcel_of_int_LH))) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
