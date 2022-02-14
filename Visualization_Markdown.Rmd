@@ -1,5 +1,5 @@
 ---
-title: "Cortical Visualization Markdown"
+title: "Visualization Markdown"
 output: html_document
 ---
 
