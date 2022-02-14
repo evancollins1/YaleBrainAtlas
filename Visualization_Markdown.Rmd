@@ -86,16 +86,16 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, R_values, G
     layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
   
     plotly_atlas_whole_RH_LH_list[[2]] <- plot_ly(source = "atlas_default", type = "mesh3d", customdata = atlas$shapes[[1]]$vertex_parcel_labels[1:31884],
-                                                x = atlas_LH$shapes[[1]]$positions[1,],
-                                                y = atlas_LH$shapes[[1]]$positions[3,],
-                                                z = atlas_LH$shapes[[1]]$positions[2,],
-                                                vertexcolor = rep(rgb(R_values, G_values, B_values, alpha_values), vertex_number_by_parcel)[1:31884],
-                                                opacity = 1,
-                                                i = atlas_LH$shapes[[1]]$indices[1,],
-                                                j = atlas_LH$shapes[[1]]$indices[3,],
-                                                k = atlas_LH$shapes[[1]]$indices[2,],
-                                                hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[1:31884],
-                                                                  "<br>", rep(extra_text_values, vertex_number_by_parcel)[1:31884])) %>%
+          x = atlas_LH$shapes[[1]]$positions[1,],
+          y = atlas_LH$shapes[[1]]$positions[3,],
+          z = atlas_LH$shapes[[1]]$positions[2,],
+          vertexcolor = rep(rgb(R_values, G_values, B_values, alpha_values), vertex_number_by_parcel)[1:31884],
+          opacity = 1,
+          i = atlas_LH$shapes[[1]]$indices[1,],
+          j = atlas_LH$shapes[[1]]$indices[3,],
+          k = atlas_LH$shapes[[1]]$indices[2,],
+          hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[1:31884],
+                            "<br>", rep(extra_text_values, vertex_number_by_parcel)[1:31884])) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
       config(displaylogo = F, displayModeBar = F) %>%
       layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) %>%
