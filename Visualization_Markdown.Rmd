@@ -49,6 +49,7 @@ parcel_count_df <- read.csv("files/parcel_count.csv")
 ```
 
 ```{r}
+# One example of how to compute RGB values for parcels
 # Function to return list of RGB colors assigned to each parcel (i.e., their component vertices) with color intensity reflecting magnitude of input data column
 
 # Input 1: dataframe = dataframe name with 696 rows corresponding to 696 parcels (first 348 should be left parcels; last 348 should be right parcels)
@@ -74,6 +75,15 @@ color_parcels_by_data <- function(dataframe, column){
 freq_colors <- color_parcels_by_data(parcel_count_df, "freq")
 ```
 
+```{r}
+parcels_of_int_RH_names <- c("R_H_A", "R_H_B", "R_H_C", "R_A_A", "R_A_B", "R_I1_A", "R_I1_B", "R_I1_C", "R_I2_A", "R_I2_B", "R_I2_C", "R_I3_A", "R_I3_B", "R_I3_C", "R_I4_A", "R_I4_B", "R_I4_C", "R_I4_D", "R_I5_A", "R_I5_B", "R_I5_C", "R_I5_D")
+parcels_of_int_LH_names <- gsub("R_", "L_", parcels_of_int_RH_names)
+
+which(parcel_count_df$parcel %in% parcels_of_int_RH_names)
+parcel_count_df$freq[which(parcel_count_df$parcel %in% parcels_of_int_RH_names)]
+parcels_of_int_RH_freq <- parcel_count_df$freq[which(parcel_count_df$parcel %in% parcels_of_int_RH_names)]
+```
+
 
 ```{r}
 # Function to return list of 3D mesh Plotly figures for whole, LH, RH, deep LH, and deep RH parcellated brains.
@@ -86,7 +96,7 @@ freq_colors <- color_parcels_by_data(parcel_count_df, "freq")
 # Input 6: G_values = 696-length vector of G color values for 696 parcels (on RGB scale)
 # Input 7: B_values = 696-length vector of B color values for 696 parcels (on RGB scale)
 # Input 8: alpha_values = 696-length vector of alpha_values for 696 parcels
-# Input 9: extra_text_values = 696-length vector of any additional information to be displayed in hovertext for 696 parcels 
+# Input 9: extra_text_values_df = 696-length vector of any additional information to be displayed in hovertext for 696 parcels 
 # Output: plotly_atlas_whole_RH_LH_list = list of five 3D mesh Plotly figures for whole, LH, RH, deep LH, and deep RH parcellated brains
 
 plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, R_values, G_values, B_values, alpha_values, extra_text_values){
@@ -100,7 +110,7 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
                                                 j = atlas$shapes[[1]]$indices[3,],
                                                 k = atlas$shapes[[1]]$indices[2,],
                                                 hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel),
-                                                                  "<br>", rep(extra_text_values, vertex_number_by_parcel))) %>%
+                                                                  "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel))) %>%
     layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
     config(displaylogo = F, displayModeBar = F) %>%
     layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
@@ -117,7 +127,7 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
                                                   j = atlas_LH$shapes[[1]]$indices[3,],
                                                   k = atlas_LH$shapes[[1]]$indices[2,],
                                                   hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[1:31868],
-                                                                    "<br>", rep(extra_text_values, vertex_number_by_parcel)[1:31868])) %>%
+                                                                    "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel)[1:31868])) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
       config(displaylogo = F, displayModeBar = F) %>%
       layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
@@ -132,7 +142,7 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
                                                   j = atlas_RH$shapes[[1]]$indices[3,],
                                                   k = atlas_RH$shapes[[1]]$indices[2,],
                                                   hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[31869:length(rep(parcel_names, vertex_number_by_parcel))],
-                                                                    "<br>", rep(extra_text_values, vertex_number_by_parcel)[31869:length(rep(parcel_names, vertex_number_by_parcel))])) %>%
+                                                                    "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel)[31869:length(rep(parcel_names, vertex_number_by_parcel))])) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
       config(displaylogo = F, displayModeBar = F) %>%
       layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
@@ -165,7 +175,7 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
                                                   j = atlas_deep_LH$shapes[[1]]$indices[3,],
                                                   k = atlas_deep_LH$shapes[[1]]$indices[2,],
                                                   hovertext = paste0("Parcel: ", rep(parcels_of_int_LH_names, vertex_number_by_parcel_of_int_LH),
-                                                                    "<br>", paste0(""))) %>%
+                                                                    "<br>Freq: ", rep(extra_text_values[which(parcel_names %in% parcels_of_int_LH_names)], vertex_number_by_parcel_of_int_LH))) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
       config(displaylogo = F, displayModeBar = F) %>%
       layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
@@ -180,7 +190,7 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
                                                   j = atlas_deep_RH$shapes[[1]]$indices[3,],
                                                   k = atlas_deep_RH$shapes[[1]]$indices[2,],
                                                   hovertext = paste0("Parcel: ", rep(parcels_of_int_RH_names, vertex_number_by_parcel_of_int_RH),
-                                                                    "<br>", paste0(""))) %>%
+                                                                    "<br>Freq: ", rep(extra_text_values[which(parcel_names %in% parcels_of_int_RH_names)], vertex_number_by_parcel_of_int_RH))) %>%
       layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
       config(displaylogo = F, displayModeBar = F) %>%
       layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
@@ -196,33 +206,33 @@ plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_
 ```{r}
 # Whole Brain
 # Note how we divide by 255 to have the upper bound of RGB values be 1
-img1 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, paste0("Freq: ", parcel_count_df$freq))[[1]]
+img1 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[1]]
 img1
 ```
 
 ```{r}
 # LH
-img2 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, paste0("Freq: ", parcel_count_df$freq))[[2]]
+img2 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[2]]
 img2
 ```
 
 ```{r}
 # RH
-img3 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, paste0("Freq: ", parcel_count_df$freq))[[3]]
+img3 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[3]]
 img3
 ```
 
 
 ```{r}
 # deep LH
-img4 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, paste0("Freq: ", parcel_count_df$freq))[[4]]
+img4 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[4]]
 img4
 ```
 
 
 ```{r}
 # deep RH
-img5 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, paste0("Freq: ", parcel_count_df$freq))[[5]]
+img5 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[5]]
 img5
 ```
 
