@@ -45,7 +45,7 @@ parcelsynth_df <- read.csv("files/parcelsynth_all_690parcels.csv")
 # One example of how to compute RGB values for parcels
 # Function to return list of RGB colors assigned to each parcel (i.e., their component vertices) with color intensity reflecting magnitude of input data column
 
-# Input 1: dataframe = dataframe name with 690 rows corresponding to 696 parcels (first 345 should be left parcels; last 345 should be right parcels)
+# Input 1: dataframe = dataframe name with 690 rows corresponding to 690 parcels (first 345 should be left parcels; last 345 should be right parcels)
 # Input 2: column = column name with by parcel frequency data
 # Output: data_colors = list of three 690-length vectors with RGB colors for 690 parcels
 
