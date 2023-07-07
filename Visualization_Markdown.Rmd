@@ -5,56 +5,49 @@ output: html_document
 
 ```{r}
 # All code written by Evan Collins
-# 14 February 2022, updated 12 February 2023
+# 14 February 2022, updated 12 February 2023, updated 7 July 2023
 # Any questions can be sent to evantomcollins@gmail.com
 ```
 
 
-```{r}
+```{r, warning = F, message = F}
 # Load packages
 library(dplyr)
 library(plotly)
-library(readobj)
+library(ggplot2)
 ```
 
 ```{r}
-# Load necessary files
-load("files/vertex_number_by_parcel.rda")
-load("files/parcel_names.rda")
+# Load atlas coordinate files
+parcel_name_vertex_num_df <- read.csv("files/parcel_name_vertex_num_df.csv")
+parcel_names <- parcel_name_vertex_num_df$parcel_names
+vertex_number_by_parcel <- parcel_name_vertex_num_df$num_vertex
 
-atlas <- read.obj("files/atlas.obj")
-# Necessary manipulations to match up labels/colors on appropriate hemispheres
-atlas$shapes[[1]]$positions[1,][1:31868] <- -1*atlas$shapes[[1]]$positions[1,][1:31868]
-atlas$shapes[[1]]$positions[1,][31869:length(atlas$shapes[[1]]$positions[1,])] <- -1*atlas$shapes[[1]]$positions[1,][31869:length(atlas$shapes[[1]]$positions[1,])]
+atlas_positions <- read.csv("files/atlas_positions.csv")
+atlas_indices <- read.csv("files/atlas_indices.csv")
 
-atlas$shapes[[1]]$vertex_parcel_labels <- rep(parcel_names, vertex_number_by_parcel)
+atlas_LH_positions <- read.csv("files/atlas_LH_positions.csv")
+atlas_LH_indices <- read.csv("files/atlas_LH_indices.csv")
 
-atlas_LH <- read.obj("files/atlas_LH.obj")
-# Necessary manipulation to match up labels/colors on appropriate hemispheres
-atlas_LH$shapes[[1]]$positions[1,] <- -1*atlas_LH$shapes[[1]]$positions[1,]
+atlas_RH_positions <- read.csv("files/atlas_RH_positions.csv")
+atlas_RH_indices <- read.csv("files/atlas_RH_indices.csv")
 
-atlas_RH <- read.obj("files/atlas_RH.obj")
-# Necessary manipulation to match up labels/colors on appropriate hemispheres
-atlas_RH$shapes[[1]]$positions[1,] <- -1*atlas_RH$shapes[[1]]$positions[1,]
+parcel_dict <- read.csv("files/parcel_dict.csv")
 
-atlas_deep_LH <- read.obj("files/atlas_deep_LH.obj")
-# Necessary manipulation to match up labels/colors on appropriate hemispheres
-atlas_deep_LH$shapes[[1]]$positions[1,] <- -1*atlas_deep_LH$shapes[[1]]$positions[1,]
+# Coloring: Example data from Scientific Reports publication
+parcel_electrode_count <- read.csv("files/parcel_electrode_count.csv")
 
-atlas_deep_RH <- read.obj("files/atlas_deep_RH.obj")
-# Necessary manipulation to match up labels/colors on appropriate hemispheres
-atlas_deep_RH$shapes[[1]]$positions[1,] <- -1*atlas_deep_RH$shapes[[1]]$positions[1,]
-
-parcel_count_df <- read.csv("files/parcel_count.csv")
+# Coloring: Example data from Parcelsynth
+parcelsynth_df <- read.csv("files/parcelsynth_all_690parcels.csv")
 ```
 
 ```{r}
 # One example of how to compute RGB values for parcels
 # Function to return list of RGB colors assigned to each parcel (i.e., their component vertices) with color intensity reflecting magnitude of input data column
 
-# Input 1: dataframe = dataframe name with 696 rows corresponding to 696 parcels (first 348 should be left parcels; last 348 should be right parcels)
+# Input 1: dataframe = dataframe name with 690 rows corresponding to 696 parcels (first 345 should be left parcels; last 345 should be right parcels)
 # Input 2: column = column name with by parcel frequency data
-# Output: data_colors = list of three 696-length vectors with RGB colors for 696 parcels
+# Output: data_colors = list of three 690-length vectors with RGB colors for 690 parcels
 
 # Note: If all values in provided column are positive, gradient will be white to red.
 # Note: If all values in provided column are negative, gradient will be blue to white.
@@ -71,168 +64,211 @@ color_parcels_by_data <- function(dataframe, column){
 ```
 
 ```{r}
-# Get colors based on parcel counts cited in paper
-freq_colors <- color_parcels_by_data(parcel_count_df, "freq")
-```
+# Function to return list of 3D mesh interactive figures for whole, LH, RH, deep LH, and deep RH parcellated brains in Yale Brain Atlas space.
+# Input 1: R_values = 690-length vector of R color values for 696 parcels (on RGB scale)
+# Input 2: G_values = 690-length vector of G color values for 696 parcels (on RGB scale)
+# Input 3: B_values = 690-length vector of B color values for 696 parcels (on RGB scale)
+# Input 4: extra_text_values_df = 690-length vector of any additional information to be displayed in hovertext for 690 parcels
+# Output: interactive_brain_list = list of three 3D interactive figures for whole, LH, and RH parcellated brains
 
-```{r}
-parcels_of_int_RH_names <- c("R_H_A", "R_H_B", "R_H_C", "R_A_A", "R_A_B", "R_I1_A", "R_I1_B", "R_I1_C", "R_I2_A", "R_I2_B", "R_I2_C", "R_I3_A", "R_I3_B", "R_I3_C", "R_I4_A", "R_I4_B", "R_I4_C", "R_I4_D", "R_I5_A", "R_I5_B", "R_I5_C", "R_I5_D")
-parcels_of_int_LH_names <- gsub("R_", "L_", parcels_of_int_RH_names)
-
-which(parcel_count_df$parcel %in% parcels_of_int_RH_names)
-parcel_count_df$freq[which(parcel_count_df$parcel %in% parcels_of_int_RH_names)]
-parcels_of_int_RH_freq <- parcel_count_df$freq[which(parcel_count_df$parcel %in% parcels_of_int_RH_names)]
-```
-
-
-```{r}
-# Function to return list of 3D mesh Plotly figures for whole, LH, RH, deep LH, and deep RH parcellated brains.
-# Input 1: atlas = whole brain atlas variable imported via read.obj
-# Input 2: atlas_LH = LH brain atlas variable imported via read.obj
-# Input 3: atlas_RH = RH brain atlas variable imported via read.obj
-# Input 3: atlas_deep_LH = deep structures (amygdala, insula, hippocampus) of LH brain atlas variable imported via read.obj
-# Input 4: atlas_deep_RH = deep structures (amygdala, insula, hippocampus) of RH brain atlas variable imported via read.obj
-# Input 5: R_values = 696-length vector of R color values for 696 parcels (on RGB scale)
-# Input 6: G_values = 696-length vector of G color values for 696 parcels (on RGB scale)
-# Input 7: B_values = 696-length vector of B color values for 696 parcels (on RGB scale)
-# Input 8: alpha_values = 696-length vector of alpha_values for 696 parcels
-# Input 9: extra_text_values_df = 696-length vector of any additional information to be displayed in hovertext for 696 parcels 
-# Output: plotly_atlas_whole_RH_LH_list = list of five 3D mesh Plotly figures for whole, LH, RH, deep LH, and deep RH parcellated brains
-
-plot_plotly_atlas_whole_RH_LH <- function(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, R_values, G_values, B_values, alpha_values, extra_text_values){
-  plotly_atlas_whole_RH_LH_list <- list()
-  plotly_atlas_whole_RH_LH_list[[1]] <- plot_ly(type = "mesh3d",
-                                                x = atlas$shapes[[1]]$positions[1,],
-                                                y = atlas$shapes[[1]]$positions[3,],
-                                                z = atlas$shapes[[1]]$positions[2,],
-                                                vertexcolor = rep(rgb(R_values, G_values, B_values, alpha_values), vertex_number_by_parcel),
-                                                i = atlas$shapes[[1]]$indices[1,],
-                                                j = atlas$shapes[[1]]$indices[3,],
-                                                k = atlas$shapes[[1]]$indices[2,],
-                                                hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel),
-                                                                  "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel))) %>%
-    layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
-    config(displaylogo = F, displayModeBar = F) %>%
-    layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
-    #layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
-    
-    
-    plotly_atlas_whole_RH_LH_list[[2]] <- plot_ly(type = "mesh3d", 
-                                                  x = atlas_LH$shapes[[1]]$positions[1,],
-                                                  y = atlas_LH$shapes[[1]]$positions[3,],
-                                                  z = atlas_LH$shapes[[1]]$positions[2,],
-                                                  vertexcolor = rep(rgb(R_values, G_values, B_values, alpha_values), vertex_number_by_parcel)[1:31868],
-                                                  opacity = 1,
-                                                  i = atlas_LH$shapes[[1]]$indices[1,],
-                                                  j = atlas_LH$shapes[[1]]$indices[3,],
-                                                  k = atlas_LH$shapes[[1]]$indices[2,],
-                                                  hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[1:31868],
-                                                                    "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel)[1:31868])) %>%
-      layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
-      config(displaylogo = F, displayModeBar = F) %>%
-      layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
-      #layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
-    
-    plotly_atlas_whole_RH_LH_list[[3]] <- plot_ly(type = "mesh3d", 
-                                                  x = atlas_RH$shapes[[1]]$positions[1,],
-                                                  y = atlas_RH$shapes[[1]]$positions[3,],
-                                                  z = atlas_RH$shapes[[1]]$positions[2,],
-                                                  vertexcolor = rep(rgb(R_values, G_values, B_values, alpha_values), vertex_number_by_parcel)[31869:length(atlas$shapes[[1]]$vertex_parcel_labels)],
-                                                  i = atlas_RH$shapes[[1]]$indices[1,],
-                                                  j = atlas_RH$shapes[[1]]$indices[3,],
-                                                  k = atlas_RH$shapes[[1]]$indices[2,],
-                                                  hovertext = paste0("Parcel: ", rep(parcel_names, vertex_number_by_parcel)[31869:length(rep(parcel_names, vertex_number_by_parcel))],
-                                                                    "<br>Freq: ", rep(extra_text_values, vertex_number_by_parcel)[31869:length(rep(parcel_names, vertex_number_by_parcel))])) %>%
-      layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
-      config(displaylogo = F, displayModeBar = F) %>%
-      layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
-      #layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
-    
-    #############
-    # Preparing data for deep structures
-    parcels_of_int_RH_names <- c("R_H_A", "R_H_B", "R_H_C", "R_A_A", "R_A_B", "R_I1_A", "R_I1_B", "R_I1_C", "R_I2_A", "R_I2_B", "R_I2_C", "R_I3_A", "R_I3_B", "R_I3_C", "R_I4_A", "R_I4_B", "R_I4_C", "R_I4_D", "R_I5_A", "R_I5_B", "R_I5_C", "R_I5_D")
-    parcels_of_int_LH_names <- gsub("R_", "L_", parcels_of_int_RH_names)
-    parcels_of_int_RH <- which(parcel_names %in% parcels_of_int_RH_names)
-    parcels_of_int_LH <- which(parcel_names %in% parcels_of_int_LH_names)
-    colors_of_int_RH <- list()
-    colors_of_int_LH <- list()
-    for (i in 1:length(parcels_of_int_RH)){
-      colors_of_int_RH[[i]] <- rep(rgb(R_values, G_values, B_values, 1), vertex_number_by_parcel)[(cumsum(vertex_number_by_parcel)[parcels_of_int_RH[i]-1]+1):(cumsum(vertex_number_by_parcel)[parcels_of_int_RH[i]])]
-      colors_of_int_LH[[i]] <- rep(rgb(R_values, G_values, B_values, 1), vertex_number_by_parcel)[(cumsum(vertex_number_by_parcel)[parcels_of_int_LH[i]-1]+1):(cumsum(vertex_number_by_parcel)[parcels_of_int_LH[i]])]
+plot_interactive_brain <-
+  function(R_values = NULL,
+           G_values = NULL ,
+           B_values = NULL ,
+           extra_text_values = NULL) {
+    if (is.null(R_values)) {
+      # if no colors provided, default to color-coded brain
+      R_values <- parcel_dict$YBA_R_color
+      G_values <- parcel_dict$YBA_G_color
+      B_values <- parcel_dict$YBA_B_color
     }
-    vertex_number_by_parcel_of_int_RH <- vertex_number_by_parcel[parcels_of_int_RH]
-    vertex_number_by_parcel_of_int_LH <- vertex_number_by_parcel[parcels_of_int_LH]
-    colors_of_int_RH <- unlist(colors_of_int_RH)
-    colors_of_int_LH <- unlist(colors_of_int_LH)
-    #############
     
-    plotly_atlas_whole_RH_LH_list[[4]] <- plot_ly(type = "mesh3d", 
-                                                  x = atlas_deep_LH$shapes[[1]]$positions[1,],
-                                                  y = atlas_deep_LH$shapes[[1]]$positions[3,],
-                                                  z = atlas_deep_LH$shapes[[1]]$positions[2,],
-                                                  vertexcolor = colors_of_int_LH,
-                                                  i = atlas_deep_LH$shapes[[1]]$indices[1,],
-                                                  j = atlas_deep_LH$shapes[[1]]$indices[3,],
-                                                  k = atlas_deep_LH$shapes[[1]]$indices[2,],
-                                                  hovertext = paste0("Parcel: ", rep(parcels_of_int_LH_names, vertex_number_by_parcel_of_int_LH),
-                                                                    "<br>Freq: ", rep(extra_text_values[which(parcel_names %in% parcels_of_int_LH_names)], vertex_number_by_parcel_of_int_LH))) %>%
-      layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
+    interactive_brain_list <- list()
+    interactive_brain_list[[1]] <- plot_ly(
+      type = "mesh3d",
+      x = atlas_positions$x,
+      y = atlas_positions$y,
+      z = atlas_positions$z,
+      vertexcolor = rep(
+        rgb(R_values / 255, G_values / 255, B_values / 255, 1),
+        vertex_number_by_parcel
+      ),
+      i = atlas_indices$i,
+      j = atlas_indices$j,
+      k = atlas_indices$k,
+      hovertext = paste0(
+        "Parcel: ",
+        rep(parcel_names, vertex_number_by_parcel),
+        "<br>Value: ",
+        rep(extra_text_values, vertex_number_by_parcel)
+      )
+    ) %>%
+      layout(hoverlabel = list(
+        bgcolor = "white",
+        bordercolor = "darkblue",
+        font = list(size = 15, family = "Verdana")
+      )) %>%
       config(displaylogo = F, displayModeBar = F) %>%
-      layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
-      #layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
+      layout(scene = list(camera = list(
+        eye = list(x = 0, y = 0, z = 1.4),
+        up = list(x = 0, y = 1, z = 0),
+        center = list(x = 0, y = 0, z = 0)
+      )))
     
-    plotly_atlas_whole_RH_LH_list[[5]] <- plot_ly(type = "mesh3d", 
-                                                  x = atlas_deep_RH$shapes[[1]]$positions[1,],
-                                                  y = atlas_deep_RH$shapes[[1]]$positions[3,],
-                                                  z = atlas_deep_RH$shapes[[1]]$positions[2,],
-                                                  vertexcolor = colors_of_int_RH,
-                                                  i = atlas_deep_RH$shapes[[1]]$indices[1,],
-                                                  j = atlas_deep_RH$shapes[[1]]$indices[3,],
-                                                  k = atlas_deep_RH$shapes[[1]]$indices[2,],
-                                                  hovertext = paste0("Parcel: ", rep(parcels_of_int_RH_names, vertex_number_by_parcel_of_int_RH),
-                                                                    "<br>Freq: ", rep(extra_text_values[which(parcel_names %in% parcels_of_int_RH_names)], vertex_number_by_parcel_of_int_RH))) %>%
-      layout(hoverlabel = list(bgcolor = "white", bordercolor = "darkblue", font = list(size = 15, family = "Verdana"))) %>%
+    
+    interactive_brain_list[[2]] <- plot_ly(
+      type = "mesh3d",
+      x = atlas_LH_positions$x,
+      y = atlas_LH_positions$y,
+      z = atlas_LH_positions$z,
+      vertexcolor = rep(
+        rgb(R_values / 255, G_values / 255, B_values / 255, 1),
+        vertex_number_by_parcel
+      )[1:31509],
+      opacity = 1,
+      i = atlas_LH_indices$i,
+      j = atlas_LH_indices$j,
+      k = atlas_LH_indices$k,
+      hovertext = paste0(
+        "Parcel: ",
+        rep(parcel_names, vertex_number_by_parcel)[1:31509],
+        "<br>Value: ",
+        rep(extra_text_values, vertex_number_by_parcel)[1:31509]
+      )
+    ) %>%
+      layout(hoverlabel = list(
+        bgcolor = "white",
+        bordercolor = "darkblue",
+        font = list(size = 15, family = "Verdana")
+      )) %>%
       config(displaylogo = F, displayModeBar = F) %>%
-      layout(scene = list(camera = list(eye = list(x = 1, y = 1, z = 0)))) #%>%
-      #layout(paper_bgcolor = "rgb(68, 68, 68)", plot_bgcolor = "rgb(68, 68, 68)")
+      layout(scene = list(camera = list(
+        eye = list(x = 1.5, y = 0, z = 0),
+        up = list(x = 0, y = 0, z = 1),
+        center = list(x = 0, y = 0, z = 0)
+      )))
     
-    return(plotly_atlas_whole_RH_LH_list)
+    interactive_brain_list[[3]] <- plot_ly(
+      type = "mesh3d",
+      x = atlas_RH_positions$x,
+      y = atlas_RH_positions$y,
+      z = atlas_RH_positions$z,
+      vertexcolor = rep(
+        rgb(R_values / 255, G_values / 255, B_values / 255, 1),
+        vertex_number_by_parcel
+      )[31510:length(atlas_positions$x)],
+      i = atlas_RH_indices$i,
+      j = atlas_RH_indices$j,
+      k = atlas_RH_indices$k,
+      hovertext = paste0(
+        "Parcel: ",
+        rep(parcel_names, vertex_number_by_parcel)[31510:length(rep(parcel_names, vertex_number_by_parcel))],
+        "<br>Value: ",
+        rep(extra_text_values, vertex_number_by_parcel)[31510:length(rep(parcel_names, vertex_number_by_parcel))]
+      )
+    ) %>%
+      layout(hoverlabel = list(
+        bgcolor = "white",
+        bordercolor = "darkblue",
+        font = list(size = 15, family = "Verdana")
+      )) %>%
+      config(displaylogo = F, displayModeBar = F) %>%
+      layout(scene = list(camera = list(
+        eye = list(x = 1.3, y = 0, z = 0),
+        up = list(x = 0, y = 0, z = 1),
+        center = list(x = 0, y = 0, z = 0)
+      )))
+    return(interactive_brain_list)
 }
 ```
 
 
-# Visualizations
+# Get R, G, B, colors based on example data
 
 ```{r}
-# Whole Brain
-# Note how we divide by 255 to have the upper bound of RGB values be 1
-img1 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[1]]
-img1
+# for electrode count data
+parcel_electrode_count_colors <- color_parcels_by_data(parcel_electrode_count, "freq")
+```
+
+```{r}
+# for Parcelsynth data for specific functional term, e.g., "language"
+parcel_parcelsynth_language_colors <- color_parcels_by_data(parcelsynth_df, "language")
+```
+
+
+# Visualizations - Default Yale Brain Atlas colors
+
+```{r}
+ex0 <- 
+  plot_interactive_brain()
+```
+
+```{r}
+# Whole brain
+ex0[[1]]
 ```
 
 ```{r}
 # LH
-img2 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_LH, atlas_deep_RH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[2]]
-img2
+ex0[[2]]
 ```
 
 ```{r}
 # RH
-img3 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[3]]
-img3
+ex0[[3]]
 ```
 
+
+# Visualizations - Electrode count example
 
 ```{r}
-# deep LH
-img4 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[4]]
-img4
+ex1 <-
+  plot_interactive_brain(
+    R_values = parcel_electrode_count_colors[[1]], 
+    G_values = parcel_electrode_count_colors[[2]], 
+    B_values = parcel_electrode_count_colors[[3]], 
+    extra_text_values = parcel_electrode_count$freq
+    )
 ```
-
 
 ```{r}
-# deep RH
-img5 <- plot_plotly_atlas_whole_RH_LH(atlas, atlas_LH, atlas_RH, atlas_deep_RH, atlas_deep_LH, freq_colors[[1]]/255, freq_colors[[2]]/255, freq_colors[[3]]/255, 1, parcel_count_df$freq)[[5]]
-img5
+# Whole brain
+ex1[[1]]
 ```
 
+```{r}
+# LH
+ex1[[2]]
+```
+
+```{r}
+# RH
+ex1[[3]]
+```
+
+# Visualizations - Parcelsynth "language" z-score example
+
+```{r}
+ex2 <-
+  plot_interactive_brain(
+    R_values = parcel_parcelsynth_language_colors[[1]], 
+    G_values = parcel_parcelsynth_language_colors[[2]], 
+    B_values = parcel_parcelsynth_language_colors[[3]], 
+    extra_text_values = parcelsynth_df$language
+    )
+```
+
+```{r}
+# Whole brain
+ex2[[1]]
+```
+
+```{r}
+# LH
+ex2[[2]]
+```
+
+```{r}
+# RH
+ex2[[3]]
+```

@@ -1,0 +1,691 @@
+"X","Hemisphere","Lobe","Region","Gyrus","Code","Long.name","YBA_R_color","YBA_G_color","YBA_B_color"
+1,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_A","Left superior temporal pole A",0,115,230
+2,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_B","Left superior temporal pole B",0,115,230
+3,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_C","Left superior temporal pole B",0,115,230
+4,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_D","Left superior temporal pole C",0,115,230
+5,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_E","Left superior temporal pole D",0,115,230
+6,"Left","Temporal","Temporal pole","Superior temporal pole","L_TP1_F","Left superior temporal pole F",0,115,230
+7,"Left","Temporal","Temporal pole","Superior middle temporal pole","L_TP2.1_A","Left superior middle temporal pole A",47,151,255
+8,"Left","Temporal","Temporal pole","Superior middle temporal pole","L_TP2.1_B","Left superior middle temporal pole B",47,151,255
+9,"Left","Temporal","Temporal pole","Superior middle temporal pole","L_TP2.1_C","Left superior middle temporal pole C",47,151,255
+10,"Left","Temporal","Temporal pole","Superior middle temporal pole","L_TP2.1_D","Left superior middle temporal pole D",47,151,255
+11,"Left","Temporal","Temporal pole","Inferior middle temporal pole","L_TP2.2_A","Left inferior middle temporal pole A",93,174,255
+12,"Left","Temporal","Temporal pole","Inferior middle temporal pole","L_TP2.2_B","Left inferior middle temporal pole B",93,174,255
+13,"Left","Temporal","Temporal pole","Inferior middle temporal pole","L_TP2.2_C","Left inferior middle temporal pole C",93,174,255
+14,"Left","Temporal","Temporal pole","Inferior middle temporal pole","L_TP2.2_D","Left inferior middle temporal pole D",93,174,255
+15,"Left","Temporal","Temporal pole","Inferior temporal pole","L_TP3_A","Left inferior temporal pole A",133,194,255
+16,"Left","Temporal","Temporal pole","Inferior temporal pole","L_TP3_B","Left inferior temporal pole B",133,194,255
+17,"Left","Temporal","Temporal pole","Inferior temporal pole","L_TP3_C","Left inferior temporal pole C",133,194,255
+18,"Left","Temporal","Temporal pole","Inferior temporal pole","L_TP3_D","Left inferior temporal pole D",133,194,255
+19,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_A","Left superior temporal gyrus A",110,110,255
+20,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_B","Left superior temporal gyrus B",110,110,255
+21,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_C","Left superior temporal gyrus C",110,110,255
+22,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_D","Left superior temporal gyrus D",110,110,255
+23,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_E","Left superior temporal gyrus E",110,110,255
+24,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_F","Left superior temporal gyrus F",110,110,255
+25,"Left","Temporal","Temporal body","Superior temporal gyrus","L_T1_G","Left superior temporal gyrus G",110,110,255
+26,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_A","Left superior middle temporal gyrus A",135,135,255
+27,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_B","Left superior middle temporal gyrus B",135,135,255
+28,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_C","Left superior middle temporal gyrus C",135,135,255
+29,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_D","Left superior middle temporal gyrus D",135,135,255
+30,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_E","Left superior middle temporal gyrus E",135,135,255
+31,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_F","Left superior middle temporal gyrus F",135,135,255
+32,"Left","Temporal","Temporal body","Superior middle temporal gyrus","L_T2.1_G","Left superior middle temporal gyrus G",135,135,255
+33,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_A","Left inferior middle temporal gyrus A",160,160,255
+34,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_B","Left inferior middle temporal gyrus B",160,160,255
+35,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_C","Left inferior middle temporal gyrus C",160,160,255
+36,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_D","Left inferior middle temporal gyrus D",160,160,255
+37,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_E","Left inferior middle temporal gyrus E",160,160,255
+38,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_F","Left inferior middle temporal gyrus F",160,160,255
+39,"Left","Temporal","Temporal body","Inferior middle temporal gyrus","L_T2.2_G","Left inferior middle temporal gyrus G",160,160,255
+40,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_A","Left lateral inferior temporal gyrus A",183,183,255
+41,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_B","Left lateral inferior temporal gyrus B",183,183,255
+42,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_C","Left lateral inferior temporal gyrus C",183,183,255
+43,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_D","Left lateral inferior temporal gyrus D",183,183,255
+44,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_E","Left lateral inferior temporal gyrus E",183,183,255
+45,"Left","Temporal","Temporal body","Lateral inferior temporal gyrus","L_T3.1_F","Left lateral inferior temporal gyrus F",183,183,255
+46,"Left","Temporal","Temporal body","Basal inferior temporal gyus","L_T3.2_A","Left basal inferior temporal gyrus A",210,210,255
+47,"Left","Temporal","Temporal body","Basal inferior temporal gyus","L_T3.2_B","Left basal inferior temporal gyrus B",210,210,255
+48,"Left","Temporal","Temporal body","Basal inferior temporal gyus","L_T3.2_C","Left basal inferior temporal gyrus C",210,210,255
+49,"Left","Temporal","Temporal body","Basal inferior temporal gyus","L_T3.2_D","Left basal inferior temporal gyrus D",210,210,255
+50,"Left","Temporal","Temporal body","Basal inferior temporal gyus","L_T3.2_E","Left basal inferior temporal gyrus E",210,210,255
+51,"Left","Occipital","Occipital","Superior occipital gyrus","L_O1_A","Left superior occipital gyrus A",217,217,0
+52,"Left","Occipital","Occipital","Superior occipital gyrus","L_O1_B","Left superior occipital gyrus B",217,217,0
+53,"Left","Occipital","Occipital","Superior occipital gyrus","L_O1_C","Left superior occipital gyrus C",217,217,0
+54,"Left","Occipital","Occipital","Superior occipital gyrus","L_O1_D","Left superior occipital gyrus D",217,217,0
+55,"Left","Occipital","Occipital","Superior occipital gyrus","L_O1_E","Left superior occipital gyrus E",217,217,0
+56,"Left","Occipital","Occipital","Superior middle occipital gyrus","L_O2.1_A","Left superior middle occipital gyrus A",235,235,0
+57,"Left","Occipital","Occipital","Superior middle occipital gyrus","L_O2.1_B","Left superior middle occipital gyrus B",235,235,0
+58,"Left","Occipital","Occipital","Superior middle occipital gyrus","L_O2.1_C","Left superior middle occipital gyrus C",235,235,0
+59,"Left","Occipital","Occipital","Superior middle occipital gyrus","L_O2.1_D","Left superior middle occipital gyrus D",235,235,0
+60,"Left","Occipital","Occipital","Superior middle occipital gyrus","L_O2.1_E","Left superior middle occipital gyrus E",235,235,0
+61,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_A","Left inferior middle occipital gyrus A",255,255,38
+62,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_B","Left inferior middle occipital gyrus B",255,255,38
+63,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_C","Left inferior middle occipital gyrus C",255,255,38
+64,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_D","Left inferior middle occipital gyrus D",255,255,38
+65,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_E","Left inferior middle occipital gyrus E",255,255,38
+66,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_F","Left inferior middle occipital gyrus F",255,255,38
+67,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_G","Left inferior middle occipital gyrus G",255,255,38
+68,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_H","Left inferior middle occipital gyrus H",255,255,38
+69,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_I","Left inferior middle occipital gyrus I",255,255,38
+70,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_J","Left inferior middle occipital gyrus J",255,255,38
+71,"Left","Occipital","Occipital","Inferior middle occipital gyrus","L_O2.2_K","Left inferior middle occipital gyrus K",255,255,38
+72,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_A","Left inferior occipital gyrus A",255,255,97
+73,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_B","Left inferior occipital gyrus B",255,255,97
+74,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_C.1","Left inferior occipital gyrus C superior",255,255,97
+75,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_C.2","Left inferior occipital gyrus C inferior",255,255,97
+76,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_D.1","Left inferior occipital gyrus D superior",255,255,97
+77,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_D.2","Left inferior occipital gyrus D inferior",255,255,97
+78,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_E","Left inferior occipital gyrus E",255,255,97
+79,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_F","Left inferior occipital gyrus F",255,255,97
+80,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_G","Left inferior occipital gyrus G",255,255,97
+81,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_H","Left inferior occipital gyrus H",255,255,97
+82,"Left","Occipital","Occipital","Inferior occipital gyrus","L_O3_I","Left inferior occipital gyrus I",255,255,97
+83,"Left","Occipital","Occipital","Fourth occipital gyrus","L_O4_A","Left fourth occipital gyrus A",255,255,165
+84,"Left","Occipital","Occipital","Fourth occipital gyrus","L_O4_B","Left fourth occipital gyrus B",255,255,97
+85,"Left","Parietal","Angular","Superior angular gyrus","L_AN1_A","Left superior angular gyrus A",115,255,127
+86,"Left","Parietal","Angular","Superior angular gyrus","L_AN1_B","Left superior angular gyrus B",115,255,127
+87,"Left","Parietal","Angular","Superior angular gyrus","L_AN1_C","Left superior angular gyrus C",115,255,127
+88,"Left","Parietal","Angular","Inferior angular gyrus","L_AN2_A","Left inferior angular gyrus A",133,255,145
+89,"Left","Parietal","Angular","Inferior angular gyrus","L_AN2_B","Left inferior angular gyrus B",133,255,145
+90,"Left","Parietal","Angular","Inferior angular gyrus","L_AN2_C","Left inferior angular gyrus C",133,255,145
+91,"Left","Parietal","Angular","Inferior angular gyrus","L_AN2_D","Left inferior angular gyrus D",133,255,145
+92,"Left","Parietal","Supramarginal","Supramarginal gyrus 1","L_SM1_A","Left supramarginal gyrus 1 A",129,221,0
+93,"Left","Parietal","Supramarginal","Supramarginal gyrus 1","L_SM1_B","Left supramarginal gyrus 1 B",129,221,0
+94,"Left","Parietal","Supramarginal","Supramarginal gyrus 1","L_SM1_C","Left supramarginal gyrus 1 C",129,221,0
+95,"Left","Parietal","Supramarginal","Supramarginal gyrus 1","L_SM1_D","Left supramarginal gyrus 1 D",129,221,0
+96,"Left","Parietal","Supramarginal","Supramarginal gyrus 1","L_SM1_E","Left supramarginal gyrus 1 E",129,221,0
+97,"Left","Parietal","Supramarginal","Supramarginal gyrus 2","L_SM2_A","Left supramarginal gyrus 2 A",153,255,0
+98,"Left","Parietal","Supramarginal","Supramarginal gyrus 2","L_SM2_B","Left supramarginal gyrus 2 B",149,255,0
+99,"Left","Parietal","Supramarginal","Supramarginal gyrus 3","L_SM3_A","Left supramarginal gyrus 3 A",170,255,43
+100,"Left","Parietal","Supramarginal","Supramarginal gyrus 3","L_SM3_B","Left supramarginal gyrus 3 B",170,255,43
+101,"Left","Parietal","Supramarginal","Supramarginal gyrus 3","L_SM3_C","Left supramarginal gyrus 3 C",170,255,43
+102,"Left","Parietal","Supramarginal","Supramarginal gyrus 4","L_SM4_A","Left supramarginal gyrus 4 A",179,255,56
+103,"Left","Parietal","Supramarginal","Supramarginal gyrus 4","L_SM4_B","Left supramarginal gyrus 4 B",179,255,56
+104,"Left","Parietal","Supramarginal","Supramarginal gyrus 4","L_SM4_C","Left supramarginal gyrus 4 C",179,255,56
+105,"Left","Parietal","Supramarginal","Supramarginal gyrus 5","L_SM5_A","Left supramarginal gyrus 5 A",186,255,65
+106,"Left","Parietal","Supramarginal","Supramarginal gyrus 5","L_SM5_B","Left supramarginal gyrus 5 B",186,255,65
+107,"Left","Parietal","Supramarginal","Supramarginal gyrus 5","L_SM5_C","Left supramarginal gyrus 5 C",186,255,65
+108,"Left","Parietal","Supramarginal","Supramarginal gyrus 5","L_SM5_D","Left supramarginal gyrus 5 D",186,255,65
+109,"Left","Parietal","Supramarginal","Supramarginal gyrus 5","L_SM5_E","Left supramarginal gyrus 5 E",186,255,65
+110,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_A","Left superior parietal 1 A",0,122,0
+111,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_B","Left superior parietal 1 B",0,122,0
+112,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_C","Left superior parietal 1 C",0,122,0
+113,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_D","Left superior parietal 1 D",0,122,0
+114,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_E","Left superior parietal 1 E",0,122,0
+115,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_F","Left superior parietal 1 F",0,122,0
+116,"Left","Parietal","Superior parietal","Superior parietal 1","L_P1_G","Left superior parietal 1 G",0,122,0
+117,"Left","Parietal","Superior parietal","Superior parietal 2","L_P2_A","Left superior parietal 2 A",0,150,0
+118,"Left","Parietal","Superior parietal","Superior parietal 2","L_P2_B","Left superior parietal 2 B",0,150,0
+119,"Left","Parietal","Superior parietal","Superior parietal 2","L_P2_C","Left superior parietal 2 C",0,150,0
+120,"Left","Parietal","Superior parietal","Superior parietal 2","L_P2_D","Left superior parietal 2 D",0,150,0
+121,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_A","Left superior parietal 3 A",0,176,0
+122,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_B","Left superior parietal 3 B",0,176,0
+123,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_C","Left superior parietal 3 C",0,176,0
+124,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_D","Left superior parietal 3 D",0,176,0
+125,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_E","Left superior parietal 3 E",0,176,0
+126,"Left","Parietal","Superior parietal","Superior parietal 3","L_P3_F","Left superior parietal 3 F",0,176,0
+127,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_A","Left superior parietal 4 A",0,203,0
+128,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_B","Left superior parietal 4 B",0,203,0
+129,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_C","Left superior parietal 4 C",0,203,0
+130,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_D","Left superior parietal 4 D",0,203,0
+131,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_E","Left superior parietal 4 E",0,203,0
+132,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_F","Left superior parietal 4 F",0,203,0
+133,"Left","Parietal","Superior parietal","Superior parietal 4","L_P4_G","Left superior parietal 4 G",0,203,0
+134,"Left","Parietal","Sensory","Postcentral","L_S_A","Left somatosensory A",0,255,0
+135,"Left","Parietal","Sensory","Postcentral","L_S_B","Left somatosensory B",0,255,0
+136,"Left","Parietal","Sensory","Postcentral","L_S_C","Left somatosensory C",0,255,0
+137,"Left","Parietal","Sensory","Postcentral","L_S_D","Left somatosensory D",0,255,0
+138,"Left","Parietal","Sensory","Postcentral","L_S_E","Left somatosensory E",0,255,0
+139,"Left","Parietal","Sensory","Postcentral","L_S_F","Left somatosensory F",0,255,0
+140,"Left","Parietal","Sensory","Postcentral","L_S_G","Left somatosensory G",0,255,0
+141,"Left","Parietal","Sensory","Postcentral","L_S_H","Left somatosensory H",0,255,0
+142,"Left","Parietal","Sensory","Postcentral","L_S_I","Left somatosensory I",0,255,0
+143,"Left","Parietal","Sensory","Postcentral","L_S_J","Left somatosensory J",0,255,0
+144,"Left","Parietal","Sensory","Postcentral","L_S_K","Left somatosensory K",0,255,0
+145,"Left","Parietal","Sensory","Postcentral","L_S_L","Left somatosensory L",0,255,0
+146,"Left","Parietal","Sensory","Postcentral","L_S_M","Left somatosensory M",0,255,0
+147,"Left","Frontal","Motor","M1","L_M1_A","Left anterior motor A",200,0,0
+148,"Left","Frontal","Motor","M1","L_M1_B","Left anterior motor B",200,0,0
+149,"Left","Frontal","Motor","M1","L_M1_C","Left anterior motor C",200,0,0
+150,"Left","Frontal","Motor","M1","L_M1_D","Left anterior motor D",200,0,0
+151,"Left","Frontal","Motor","M2","L_M2_A","Left posterior motor A",255,0,0
+152,"Left","Frontal","Motor","M2","L_M2_B","Left posterior motor B",255,0,0
+153,"Left","Frontal","Motor","M2","L_M2_C","Left posterior motor C",255,0,0
+154,"Left","Frontal","Motor","M2","L_M2_D","Left posterior motor D",255,0,0
+155,"Left","Frontal","Motor","M2","L_M2_E","Left posterior motor E",255,0,0
+156,"Left","Frontal","Motor","M2","L_M2_F","Left posterior motor F",255,0,0
+157,"Left","Frontal","Motor","M2","L_M2_G","Left posterior motor G",255,0,0
+158,"Left","Frontal","Motor","M2","L_M2_H","Left posterior motor H",255,0,0
+159,"Left","Frontal","Motor","M2","L_M2_I","Left posterior motor I",255,0,0
+160,"Left","Frontal","Motor","M2","L_M2_J","Left posterior motor J",255,0,0
+161,"Left","Frontal","Motor","M2","L_M2_K","Left posterior motor K",255,0,0
+162,"Left","Frontal","Superior frontal","Superior frontal 1","L_SF1_A","Left superior frontal gyrus 1 A",104,5,0
+163,"Left","Frontal","Superior frontal","Superior frontal 1","L_SF1_B","Left superior frontal gyrus 1 B",104,5,0
+164,"Left","Frontal","Superior frontal","Superior frontal 1","L_SF1_C","Left superior frontal gyrus 1 C",104,5,0
+165,"Left","Frontal","Superior frontal","Superior frontal 1","L_SF1_D","Left superior frontal gyrus 1 D",104,5,0
+166,"Left","Frontal","Superior frontal","Superior frontal 2","L_SF2_A","Left superior frontal gyrus 2 A",117,3,0
+167,"Left","Frontal","Superior frontal","Superior frontal 2","L_SF2_B","Left superior frontal gyrus 2 B",117,3,0
+168,"Left","Frontal","Superior frontal","Superior frontal 2","L_SF2_C","Left superior frontal gyrus 2 C",117,3,0
+169,"Left","Frontal","Superior frontal","Superior frontal 2","L_SF2_D","Left superior frontal gyrus 2 D",117,3,0
+170,"Left","Frontal","Superior frontal","Superior frontal 3","L_SF3_A","Left superior frontal gyrus 3 A",131,2,0
+171,"Left","Frontal","Superior frontal","Superior frontal 3","L_SF3_B","Left superior frontal gyrus 3 B",131,2,0
+172,"Left","Frontal","Superior frontal","Superior frontal 3","L_SF3_C","Left superior frontal gyrus 3 C",131,2,0
+173,"Left","Frontal","Superior frontal","Superior frontal 3","L_SF3_D","Left superior frontal gyrus 3 D",131,2,0
+174,"Left","Frontal","Superior frontal","Superior frontal 4","L_SF4_A","Left superior frontal gyrus 4 A",149,0,0
+175,"Left","Frontal","Superior frontal","Superior frontal 4","L_SF4_B","Left superior frontal gyrus 4 B",149,0,0
+176,"Left","Frontal","Superior frontal","Superior frontal 4","L_SF4_C","Left superior frontal gyrus 4 C",149,0,0
+177,"Left","Frontal","Superior frontal","Superior frontal 4","L_SF4_D","Left superior frontal gyrus 4 D",149,0,0
+178,"Left","Frontal","Superior frontal","Superior frontal 5","L_SF5_A","Left superior frontal gyrus 5 A",167,0,0
+179,"Left","Frontal","Superior frontal","Superior frontal 5","L_SF5_B","Left superior frontal gyrus 5 B",167,0,0
+180,"Left","Frontal","Superior frontal","Superior frontal 5","L_SF5_C","Left superior frontal gyrus 5 C",167,0,0
+181,"Left","Frontal","Superior frontal","Superior frontal 5","L_SF5_D","Left superior frontal gyrus 5 D",167,0,0
+182,"Left","Frontal","Superior frontal","Superior frontal 6","L_SF6_A","Left superior frontal gyrus 6 A",181,0,0
+183,"Left","Frontal","Superior frontal","Superior frontal 6","L_SF6_B","Left superior frontal gyrus 6 B",181,0,0
+184,"Left","Frontal","Superior frontal","Superior frontal 6","L_SF6_C","Left superior frontal gyrus 6 C",181,0,0
+185,"Left","Frontal","Superior frontal","Superior frontal 6","L_SF6_D","Left superior frontal gyrus 6 D",181,0,0
+186,"Left","Frontal","Superior frontal","Superior frontal 7","L_SF7_A","Left superior frontal gyrus 7 A",190,0,0
+187,"Left","Frontal","Superior frontal","Superior frontal 7","L_SF7_B","Left superior frontal gyrus 7 B",190,0,0
+188,"Left","Frontal","Superior frontal","Superior frontal 7","L_SF7_C","Left superior frontal gyrus 7 C",190,0,0
+189,"Left","Frontal","Superior frontal","Superior frontal 7","L_SF7_D","Left superior frontal gyrus 7 D",190,0,0
+190,"Left","Frontal","Superior frontal","Superior frontal 7","L_SF7_E","Left superior frontal gyrus 7 E",190,0,0
+191,"Left","Frontal","Superior frontal","Superior frontal 8","L_SF8_A","Left superior frontal gyrus 8 A",203,0,0
+192,"Left","Frontal","Superior frontal","Superior frontal 8","L_SF8_B","Left superior frontal gyrus 8 B",203,0,0
+193,"Left","Frontal","Superior frontal","Superior frontal 8","L_SF8_C","Left superior frontal gyrus 8 C",203,0,0
+194,"Left","Frontal","Superior frontal","Superior frontal 8","L_SF8_D","Left superior frontal gyrus 8 D",203,0,0
+195,"Left","Frontal","Middle frontal","Middle frontal 1","L_MF1_A","Left middle frontal gyrus 1 A",255,16,16
+196,"Left","Frontal","Middle frontal","Middle frontal 1","L_MF1_B","Left middle frontal gyrus 1 B",255,16,16
+197,"Left","Frontal","Middle frontal","Middle frontal 1","L_MF1_C","Left middle frontal gyrus 1 C",255,16,16
+198,"Left","Frontal","Middle frontal","Middle frontal 2","L_MF2_A","Left middle frontal gyrus 2 A",255,34,34
+199,"Left","Frontal","Middle frontal","Middle frontal 2","L_MF2_B","Left middle frontal gyrus 2 B",255,34,34
+200,"Left","Frontal","Middle frontal","Middle frontal 2","L_MF2_C","Left middle frontal gyrus 2 C",255,34,34
+201,"Left","Frontal","Middle frontal","Middle frontal 2","L_MF2_D","Left middle frontal gyrus 2 D",255,34,34
+202,"Left","Frontal","Middle frontal","Middle frontal 3","L_MF3_A","Left middle frontal gyrus 3 A",255,43,43
+203,"Left","Frontal","Middle frontal","Middle frontal 3","L_MF3_B","Left middle frontal gyrus 3 B",255,43,43
+204,"Left","Frontal","Middle frontal","Middle frontal 3","L_MF3_C","Left middle frontal gyrus 3 C",255,43,43
+205,"Left","Frontal","Middle frontal","Middle frontal 3","L_MF3_D","Left middle frontal gyrus 3 D",255,43,43
+206,"Left","Frontal","Middle frontal","Middle frontal 4","L_MF4_A","Left middle frontal gyrus 4 A",255,61,61
+207,"Left","Frontal","Middle frontal","Middle frontal 4","L_MF4_B","Left middle frontal gyrus 4 B",255,61,61
+208,"Left","Frontal","Middle frontal","Middle frontal 4","L_MF4_C","Left middle frontal gyrus 4 C",255,61,61
+209,"Left","Frontal","Middle frontal","Middle frontal 4","L_MF4_D","Left middle frontal gyrus 4 D",255,61,61
+210,"Left","Frontal","Middle frontal","Middle frontal 5","L_MF5_A","Left middle frontal gyrus 5 A",255,79,79
+211,"Left","Frontal","Middle frontal","Middle frontal 5","L_MF5_B","Left middle frontal gyrus 5 B",255,79,79
+212,"Left","Frontal","Middle frontal","Middle frontal 5","L_MF5_C","Left middle frontal gyrus 5 C",255,79,79
+213,"Left","Frontal","Middle frontal","Middle frontal 6","L_MF6_A","Left middle frontal gyrus 6 A",255,93,93
+214,"Left","Frontal","Middle frontal","Middle frontal 6","L_MF6_B","Left middle frontal gyrus 6 B",255,93,93
+215,"Left","Frontal","Middle frontal","Middle frontal 6","L_MF6_C","Left middle frontal gyrus 6 C",255,93,93
+216,"Left","Frontal","Middle frontal","Middle frontal 7","L_MF7_A","Left middle frontal gyrus 7 A",255,110,110
+217,"Left","Frontal","Middle frontal","Middle frontal 7","L_MF7_B","Left middle frontal gyrus 7 B",255,110,110
+218,"Left","Frontal","Middle frontal","Middle frontal 7","L_MF7_C","Left middle frontal gyrus 7 C",255,110,110
+219,"Left","Frontal","Middle frontal","Middle frontal 8","L_MF8_A","Left middle frontal gyrus 8 A",255,133,133
+220,"Left","Frontal","Inferior frontal","Pars opercularis","L_OP_A","Left pars opercularis A",255,133,164
+221,"Left","Frontal","Inferior frontal","Pars opercularis","L_OP_B","Left pars opercularis B",255,133,164
+222,"Left","Frontal","Inferior frontal","Pars opercularis","L_OP_C","Left pars opercularis C",255,133,164
+223,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR1_A","Left anterior pars triangularis A",255,84,132
+224,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR1_B","Left anterior pars triangularis B",255,84,132
+225,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR2_A","Left middle pars triangularis A",255,97,142
+226,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR2_B","Left middle pars triangularis B",255,97,142
+227,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR3_A","Left posterior pars triangularis A",255,102,151
+228,"Left","Frontal","Inferior frontal","Pars triangularis","L_TR3_B","Left posterior pars triangularis B",255,102,151
+229,"Left","Frontal","Inferior frontal","Pars orbitalis","L_OR_A","Left pars orbitalis A",255,79,126
+230,"Left","Frontal","Inferior frontal","Pars orbitalis","L_OR_B","Left pars orbitalis B",255,79,126
+231,"Left","Frontal","Inferior frontal","Pars orbitalis","L_OR_C","Left pars orbitalis C",255,79,126
+232,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_A","Left frontal pole 1 A",212,70,0
+233,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_B","Left frontal pole 1 B",212,73,0
+234,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_C","Left frontal pole 1 C",212,70,0
+235,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_D","Left frontal pole 1 D",212,70,0
+236,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_E","Left frontal pole 1 E",212,70,0
+237,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_F","Left frontal pole 1 F",212,70,0
+238,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_G","Left frontal pole 1 G",212,70,0
+239,"Left","Frontal","Frontal pole","Frontal pole 1","L_FP1_H","Left frontal pole 1 H",212,70,0
+240,"Left","Frontal","Frontal pole","Frontal pole 2","L_FP2_A","Left frontal pole 2 A",230,73,0
+241,"Left","Frontal","Frontal pole","Frontal pole 2","L_FP2_B","Left frontal pole 2 B",230,73,0
+242,"Left","Frontal","Frontal pole","Frontal pole 2","L_FP2_C","Left frontal pole 2 C",230,73,0
+243,"Left","Frontal","Frontal pole","Frontal pole 2","L_FP2_D","Left frontal pole 2 D",230,73,0
+244,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_A","Left frontal pole 3 A",255,81,0
+245,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_B","Left frontal pole 3 B",255,81,0
+246,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_C","Left frontal pole 3 C",255,81,0
+247,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_D","Left frontal pole 3 D",255,81,0
+248,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_E","Left frontal pole 3 E",255,81,0
+249,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_F","Left frontal pole 3 F",255,81,0
+250,"Left","Frontal","Frontal pole","Frontal pole 3","L_FP3_G","Left frontal pole 3 G",255,81,0
+251,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_A","Left frontal pole 4 A",255,98,25
+252,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_B","Left frontal pole 4 B",255,98,25
+253,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_C","Left frontal pole 4 C",255,98,25
+254,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_D","Left frontal pole 4 D",255,98,25
+255,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_E","Left frontal pole 4 E",255,98,25
+256,"Left","Frontal","Frontal pole","Frontal pole 4","L_FP4_F","Left frontal pole 4 F",255,98,25
+257,"Left","Frontal","Orbital frontal","Frontal orbital 1","L_FO1_A","Left orbitofrontal 1 A",255,171,52
+258,"Left","Frontal","Orbital frontal","Frontal orbital 1","L_FO1_B","Left orbitofrontal 1 B",255,171,52
+259,"Left","Frontal","Orbital frontal","Frontal orbital 1","L_FO1_C","Left orbitofrontal 1 C",255,171,52
+260,"Left","Frontal","Orbital frontal","Frontal orbital 1","L_FO1_D","Left orbitofrontal 1 D",255,171,52
+261,"Left","Frontal","Orbital frontal","Frontal orbital 2","L_FO2_A","Left orbitofrontal 2 A",255,182,79
+262,"Left","Frontal","Orbital frontal","Frontal orbital 2","L_FO2_B","Left orbitofrontal 2 B",255,182,79
+263,"Left","Frontal","Orbital frontal","Frontal orbital 2","L_FO2_C","Left orbitofrontal 2 C",255,182,79
+264,"Left","Frontal","Orbital frontal","Frontal orbital 2","L_FO2_D","Left orbitofrontal 2 D",255,182,79
+265,"Left","Frontal","Orbital frontal","Frontal orbital 2","L_FO2_E","Left orbitofrontal 2 E",255,182,79
+266,"Left","Frontal","Orbital frontal","Frontal orbital 3","L_FO3_A","Left orbitofrontal 3 A",255,193,106
+267,"Left","Frontal","Orbital frontal","Frontal orbital 3","L_FO3_B","Left orbitofrontal 3 B",255,193,106
+268,"Left","Frontal","Orbital frontal","Frontal orbital 3","L_FO3_C","Left orbitofrontal 3 C",255,193,106
+269,"Left","Frontal","Orbital frontal","Frontal orbital 3","L_FO3_D","Left orbitofrontal 3 D",255,193,106
+270,"Left","Frontal","Orbital frontal","Frontal orbital 4","L_FO4_A","Left orbitofrontal 4 A",255,201,124
+271,"Left","Frontal","Orbital frontal","Frontal orbital 4","L_FO4_B","Left orbitofrontal 4 B",255,201,124
+272,"Left","Frontal","Orbital frontal","Frontal orbital 4","L_FO4_C","Left orbitofrontal 4 C",255,201,124
+273,"Left","Frontal","Orbital frontal","Frontal orbital 4","L_FO4_D","Left orbitofrontal 4 D",255,201,124
+274,"Left","Frontal","Orbital frontal","Frontal orbital 5","L_FO5_A","Left orbitofrontal 5 A",255,201,124
+275,"Left","Frontal","Orbital frontal","Frontal orbital 5","L_FO5_B","Left orbitofrontal 5 B",255,201,124
+276,"Left","Frontal","Orbital frontal","Frontal orbital 5","L_FO5_C","Left orbitofrontal 5 C",255,201,124
+277,"Left","Frontal","Orbital frontal","Frontal orbital 5","L_FO5_D","Left orbitofrontal 5 D",255,201,124
+278,"Left","Frontal","Orbital frontal","Frontal orbital 5","L_FO5_E","Left orbitofrontal 5 E",255,201,124
+279,"Left","Frontal","Orbital frontal","Frontal orbital 6","L_FO6_A","Left orbitofrontal 6 A",255,220,170
+280,"Left","Frontal","Orbital frontal","Frontal orbital 6","L_FO6_B","Left orbitofrontal 6 B",255,220,170
+281,"Left","Frontal","Orbital frontal","Frontal orbital 6","L_FO6_C","Left orbitofrontal 6 C",255,220,170
+282,"Left","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","L_LOT_A","Left lateral occipitotemporal gyrus A",226,151,255
+283,"Left","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","L_LOT_B","Left lateral occipitotemporal gyrus B",226,151,255
+284,"Left","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","L_LOT_C","Left lateral occipitotemporal gyrus C",226,151,255
+285,"Left","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","L_LOT_D","Left lateral occipitotemporal gyrus D",226,151,255
+286,"Left","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","L_LOT_E","Left lateral occipitotemporal gyrus E",226,151,255
+287,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_A","Left medial occipitotemporal gyrus A",172,120,255
+288,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_B","Left medial occipitotemporal gyrus B",172,120,255
+289,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_C","Left medial occipitotemporal gyrus C",172,120,255
+290,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_D","Left medial occipitotemporal gyrus D",172,120,255
+291,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_E","Left medial occipitotemporal gyrus E",172,120,255
+292,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_F","Left medial occipitotemporal gyrus F",172,120,255
+293,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_G","Left medial occipitotemporal gyrus G",172,120,255
+294,"Left","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","L_MOT_H","Left medial occipitotemporal gyrus H",172,120,255
+295,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_A","Left parahippocampal gyrus A",255,133,223
+296,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_B","Left parahippocampal gyrus B",255,133,223
+297,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_C","Left parahippocampal gyrus C",255,133,223
+298,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_D","Left parahippocampal gyrus D",255,133,223
+299,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_E","Left parahippocampal gyrus E",255,133,223
+300,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_F","Left parahippocampal gyrus F",255,133,223
+301,"Left","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","L_PH_G","Left parahippocampal gyrus G",255,133,223
+302,"Left","Occipital","Inferior temporal-occipital","Lingual gyrus","L_L_A","Left lingual gyrus A",255,213,0
+303,"Left","Occipital","Inferior temporal-occipital","Lingual gyrus","L_L_B","Left lingual gyrus B",255,213,0
+304,"Left","Occipital","Inferior temporal-occipital","Lingual gyrus","L_L_C","Left lingual gyrus C",255,213,0
+305,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_A","Left cingulate gyrus A",181,69,174
+306,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_B","Left cingulate gyrus B",181,69,174
+307,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_C","Left cingulate gyrus C",181,69,174
+308,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_D","Left cingulate gyrus D",181,69,174
+309,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_E","Left cingulate gyrus E",181,69,174
+310,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_F","Left cingulate gyrus F",181,69,174
+311,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_G","Left cingulate gyrus G",181,69,174
+312,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_H","Left cingulate gyrus H",181,69,174
+313,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_I","Left cingulate gyrus I",181,69,174
+314,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_J","Left cingulate gyrus J",181,69,174
+315,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_K","Left cingulate gyrus K",181,69,174
+316,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_L","Left cingulate gyrus L",181,69,174
+317,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_M","Left cingulate gyrus M",181,69,174
+318,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_N.1","Left cingulate gyrus N superior",181,69,174
+319,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_N.2","Left cingulate gyrus N inferior",181,69,174
+320,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_O","Left cingulate gyrus O",181,69,174
+321,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_P","Left cingulate gyrus P",181,69,174
+322,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_Q","Left cingulate gyrus Q",181,69,174
+323,"Left","Frontal","Cingulate","Cingulate gyrus","L_CG_R","Left cingulate gyrus R",181,69,174
+324,"Left","Temporal","Medial temporal","Hippocampus","L_H_A","Left hippocampus pes",113,74,255
+325,"Left","Temporal","Medial temporal","Hippocampus","L_H_B","Left hippocampus body",113,74,255
+326,"Left","Temporal","Medial temporal","Hippocampus","L_H_C","Left hippocampus tail",113,74,255
+327,"Left","Temporal","Amygdala","Amygdala","L_A_A","Left amygdala superior",126,0,230
+328,"Left","Temporal","Amygdala","Amygdala","L_A_B","Left amygdala inferior",126,0,230
+329,"Left","Insula","Insula","Anterior short insular gyrus","L_I1_A","Left anterior short insular gyrus A",107,0,149
+330,"Left","Insula","Insula","Anterior short insular gyrus","L_I1_B","Left anterior short insular gyrus B",107,0,149
+331,"Left","Insula","Insula","Anterior short insular gyrus","L_I1_C","Left anterior short insular gyrus C",107,0,149
+332,"Left","Insula","Insula","Posterior short insular gyrus","L_I2_A","Left middle short insular gyrus A",126,0,176
+333,"Left","Insula","Insula","Posterior short insular gyrus","L_I2_B","Left middle short insular gyrus B",126,0,176
+334,"Left","Insula","Insula","Posterior short insular gyrus","L_I2_C","Left middle short insular gyrus C",126,0,176
+335,"Left","Insula","Insula","Anterior long insular gyrus","L_I3_A","Left posterior short insular gyrus A",155,0,221
+336,"Left","Insula","Insula","Anterior long insular gyrus","L_I3_B","Left posterior short insular gyrus B",155,0,221
+337,"Left","Insula","Insula","Anterior long insular gyrus","L_I3_C","Left posterior short insular gyrus C",155,0,221
+338,"Left","Insula","Insula","Middle long insular gyrus","L_I4_A","Left anterior long insular gyrus A",190,38,255
+339,"Left","Insula","Insula","Middle long insular gyrus","L_I4_B","Left anterior long insular gyrus B",190,38,255
+340,"Left","Insula","Insula","Middle long insular gyrus","L_I4_C","Left anterior long insular gyrus C",190,38,255
+341,"Left","Insula","Insula","Middle long insular gyrus","L_I4_D","Left anterior long insular gyrus D",190,38,255
+342,"Left","Insula","Insula","Posterior long insular gyrus","L_I5_A","Left posterior long insular gyrus A",211,106,255
+343,"Left","Insula","Insula","Posterior long insular gyrus","L_I5_B","Left posterior long insular gyrus B",211,106,255
+344,"Left","Insula","Insula","Posterior long insular gyrus","L_I5_C","Left posterior long insular gyrus C",211,106,255
+345,"Left","Insula","Insula","Posterior long insular gyrus","L_I5_D","Left posterior long insular gyrus D",211,106,255
+346,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_A","Right superior temporal pole A",0,115,230
+347,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_B","Right superior temporal pole B",0,115,230
+348,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_C","Right superior temporal pole B",0,115,230
+349,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_D","Right superior temporal pole C",0,115,230
+350,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_E","Right superior temporal pole D",0,115,230
+351,"Right","Temporal","Temporal pole","Superior temporal pole","R_TP1_F","Right superior temporal pole F",0,115,230
+352,"Right","Temporal","Temporal pole","Superior middle temporal pole","R_TP2.1_A","Right superior middle temporal pole A",47,151,255
+353,"Right","Temporal","Temporal pole","Superior middle temporal pole","R_TP2.1_B","Right superior middle temporal pole B",47,151,255
+354,"Right","Temporal","Temporal pole","Superior middle temporal pole","R_TP2.1_C","Right superior middle temporal pole C",47,151,255
+355,"Right","Temporal","Temporal pole","Superior middle temporal pole","R_TP2.1_D","Right superior middle temporal pole D",47,151,255
+356,"Right","Temporal","Temporal pole","Inferior middle temporal pole","R_TP2.2_A","Right inferior middle temporal pole A",93,174,255
+357,"Right","Temporal","Temporal pole","Inferior middle temporal pole","R_TP2.2_B","Right inferior middle temporal pole B",93,174,255
+358,"Right","Temporal","Temporal pole","Inferior middle temporal pole","R_TP2.2_C","Right inferior middle temporal pole C",93,174,255
+359,"Right","Temporal","Temporal pole","Inferior middle temporal pole","R_TP2.2_D","Right inferior middle temporal pole D",93,174,255
+360,"Right","Temporal","Temporal pole","Inferior temporal pole","R_TP3_A","Right inferior temporal pole A",133,194,255
+361,"Right","Temporal","Temporal pole","Inferior temporal pole","R_TP3_B","Right inferior temporal pole B",133,194,255
+362,"Right","Temporal","Temporal pole","Inferior temporal pole","R_TP3_C","Right inferior temporal pole C",133,194,255
+363,"Right","Temporal","Temporal pole","Inferior temporal pole","R_TP3_D","Right inferior temporal pole D",133,194,255
+364,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_A","Right superior temporal gyrus A",110,110,255
+365,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_B","Right superior temporal gyrus B",110,110,255
+366,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_C","Right superior temporal gyrus C",110,110,255
+367,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_D","Right superior temporal gyrus D",110,110,255
+368,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_E","Right superior temporal gyrus E",110,110,255
+369,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_F","Right superior temporal gyrus F",110,110,255
+370,"Right","Temporal","Temporal body","Superior temporal gyrus","R_T1_G","Right superior temporal gyrus G",110,110,255
+371,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_A","Right superior middle temporal gyrus A",135,135,255
+372,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_B","Right superior middle temporal gyrus B",135,135,255
+373,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_C","Right superior middle temporal gyrus C",135,135,255
+374,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_D","Right superior middle temporal gyrus D",135,135,255
+375,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_E","Right superior middle temporal gyrus E",135,135,255
+376,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_F","Right superior middle temporal gyrus F",135,135,255
+377,"Right","Temporal","Temporal body","Superior-middle temporal gyrus","R_T2.1_G","Right superior middle temporal gyrus G",135,135,255
+378,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_A","Right inferior middle temporal gyrus A",160,160,255
+379,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_B","Right inferior middle temporal gyrus B",160,160,255
+380,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_C","Right inferior middle temporal gyrus C",160,160,255
+381,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_D","Right inferior middle temporal gyrus D",160,160,255
+382,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_E","Right inferior middle temporal gyrus E",160,160,255
+383,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_F","Right inferior middle temporal gyrus F",160,160,255
+384,"Right","Temporal","Temporal body","Inferior middle temporal gyrus","R_T2.2_G","Right inferior middle temporal gyrus G",160,160,255
+385,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_A","Right lateral inferior temporal gyrus A",183,183,255
+386,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_B","Right lateral inferior temporal gyrus B",183,183,255
+387,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_C","Right lateral inferior temporal gyrus C",183,183,255
+388,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_D","Right lateral inferior temporal gyrus D",183,183,255
+389,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_E","Right lateral inferior temporal gyrus E",183,183,255
+390,"Right","Temporal","Temporal body","Lateral inferior temporal gyrus","R_T3.1_F","Right lateral inferior temporal gyrus F",183,183,255
+391,"Right","Temporal","Temporal body","Basal inferior temporal gyus","R_T3.2_A","Right basal inferior temporal gyrus A",210,210,255
+392,"Right","Temporal","Temporal body","Basal inferior temporal gyus","R_T3.2_B","Right basal inferior temporal gyrus B",210,210,255
+393,"Right","Temporal","Temporal body","Basal inferior temporal gyus","R_T3.2_C","Right basal inferior temporal gyrus C",210,210,255
+394,"Right","Temporal","Temporal body","Basal inferior temporal gyus","R_T3.2_D","Right basal inferior temporal gyrus D",210,210,255
+395,"Right","Temporal","Temporal body","Basal inferior temporal gyus","R_T3.2_E","Right basal inferior temporal gyrus E",210,210,255
+396,"Right","Occipital","Occipital","Superior occipital gyrus","R_O1_A","Right superior occipital gyrus A",217,217,0
+397,"Right","Occipital","Occipital","Superior occipital gyrus","R_O1_B","Right superior occipital gyrus B",217,217,0
+398,"Right","Occipital","Occipital","Superior occipital gyrus","R_O1_C","Right superior occipital gyrus C",217,217,0
+399,"Right","Occipital","Occipital","Superior occipital gyrus","R_O1_D","Right superior occipital gyrus D",217,217,0
+400,"Right","Occipital","Occipital","Superior occipital gyrus","R_O1_E","Right superior occipital gyrus E",217,217,0
+401,"Right","Occipital","Occipital","Superior middle occipital gyrus","R_O2.1_A","Right superior middle occipital gyrus A",235,235,0
+402,"Right","Occipital","Occipital","Superior middle occipital gyrus","R_O2.1_B","Right superior middle occipital gyrus B",235,235,0
+403,"Right","Occipital","Occipital","Superior middle occipital gyrus","R_O2.1_C","Right superior middle occipital gyrus C",235,235,0
+404,"Right","Occipital","Occipital","Superior middle occipital gyrus","R_O2.1_D","Right superior middle occipital gyrus D",235,235,0
+405,"Right","Occipital","Occipital","Superior middle occipital gyrus","R_O2.1_E","Right superior middle occipital gyrus E",235,235,0
+406,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_A","Right inferior middle occipital gyrus A",255,255,38
+407,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_B","Right inferior middle occipital gyrus B",255,255,38
+408,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_C","Right inferior middle occipital gyrus C",255,255,38
+409,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_D","Right inferior middle occipital gyrus D",255,255,38
+410,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_E","Right inferior middle occipital gyrus E",255,255,38
+411,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_F","Right inferior middle occipital gyrus F",255,255,38
+412,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_G","Right inferior middle occipital gyrus G",255,255,38
+413,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_H","Right inferior middle occipital gyrus H",255,255,38
+414,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_I","Right inferior middle occipital gyrus I",255,255,38
+415,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_J","Right inferior middle occipital gyrus J",255,255,38
+416,"Right","Occipital","Occipital","Inferior middle occipital gyrus","R_O2.2_K","Right inferior middle occipital gyrus K",255,255,38
+417,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_A","Right inferior occipital gyrus A",255,255,97
+418,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_B","Right inferior occipital gyrus B",255,255,97
+419,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_C.1","Right inferior occipital gyrus C superior",255,255,97
+420,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_C.2","Right inferior occipital gyrus C inferior",255,255,97
+421,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_D.1","Right inferior occipital gyrus D superior",255,255,97
+422,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_D.2","Right inferior occipital gyrus D inferior",255,255,97
+423,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_E","Right inferior occipital gyrus E",255,255,97
+424,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_F","Right inferior occipital gyrus F",255,255,97
+425,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_G","Right inferior occipital gyrus G",255,255,97
+426,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_H","Right inferior occipital gyrus H",255,255,97
+427,"Right","Occipital","Occipital","Inferior occipital gyrus","R_O3_I","Right inferior occipital gyrus I",255,255,97
+428,"Right","Occipital","Occipital","Fourth occipital gyrus","R_O4_A","Right fourth occipital gyrus A",255,255,165
+429,"Right","Occipital","Occipital","Fourth occipital gyrus","R_O4_B","Right fourth occipital gyrus B",255,255,97
+430,"Right","Parietal","Angular","Superior angular gyrus","R_AN1_A","Right superior angular gyrus A",115,255,127
+431,"Right","Parietal","Angular","Superior angular gyrus","R_AN1_B","Right superior angular gyrus B",115,255,127
+432,"Right","Parietal","Angular","Superior angular gyrus","R_AN1_C","Right superior angular gyrus C",115,255,127
+433,"Right","Parietal","Angular","Inferior angular gyrus","R_AN2_A","Right inferior angular gyrus A",133,255,145
+434,"Right","Parietal","Angular","Inferior angular gyrus","R_AN2_B","Right inferior angular gyrus B",133,255,145
+435,"Right","Parietal","Angular","Inferior angular gyrus","R_AN2_C","Right inferior angular gyrus C",133,255,145
+436,"Right","Parietal","Angular","Inferior angular gyrus","R_AN2_D","Right inferior angular gyrus D",133,255,145
+437,"Right","Parietal","Supramarginal","Supramarginal gyrus 1","R_SM1_A","Right supramarginal gyrus 1 A",129,221,0
+438,"Right","Parietal","Supramarginal","Supramarginal gyrus 1","R_SM1_B","Right supramarginal gyrus 1 B",129,221,0
+439,"Right","Parietal","Supramarginal","Supramarginal gyrus 1","R_SM1_C","Right supramarginal gyrus 1 C",129,221,0
+440,"Right","Parietal","Supramarginal","Supramarginal gyrus 1","R_SM1_D","Right supramarginal gyrus 1 D",129,221,0
+441,"Right","Parietal","Supramarginal","Supramarginal gyrus 1","R_SM1_E","Right supramarginal gyrus 1 E",129,221,0
+442,"Right","Parietal","Supramarginal","Supramarginal gyrus 2","R_SM2_A","Right supramarginal gyrus 2 A",153,255,0
+443,"Right","Parietal","Supramarginal","Supramarginal gyrus 2","R_SM2_B","Right supramarginal gyrus 2 B",149,255,0
+444,"Right","Parietal","Supramarginal","Supramarginal gyrus 3","R_SM3_A","Right supramarginal gyrus 3 A",170,255,43
+445,"Right","Parietal","Supramarginal","Supramarginal gyrus 3","R_SM3_B","Right supramarginal gyrus 3 B",170,255,43
+446,"Right","Parietal","Supramarginal","Supramarginal gyrus 3","R_SM3_C","Right supramarginal gyrus 3 C",170,255,43
+447,"Right","Parietal","Supramarginal","Supramarginal gyrus 4","R_SM4_A","Right supramarginal gyrus 4 A",179,255,56
+448,"Right","Parietal","Supramarginal","Supramarginal gyrus 4","R_SM4_B","Right supramarginal gyrus 4 B",179,255,56
+449,"Right","Parietal","Supramarginal","Supramarginal gyrus 4","R_SM4_C","Right supramarginal gyrus 4 C",179,255,56
+450,"Right","Parietal","Supramarginal","Supramarginal gyrus 5","R_SM5_A","Right supramarginal gyrus 5 A",186,255,65
+451,"Right","Parietal","Supramarginal","Supramarginal gyrus 5","R_SM5_B","Right supramarginal gyrus 5 B",186,255,65
+452,"Right","Parietal","Supramarginal","Supramarginal gyrus 5","R_SM5_C","Right supramarginal gyrus 5 C",186,255,65
+453,"Right","Parietal","Supramarginal","Supramarginal gyrus 5","R_SM5_D","Right supramarginal gyrus 5 D",186,255,65
+454,"Right","Parietal","Supramarginal","Supramarginal gyrus 5","R_SM5_E","Right supramarginal gyrus 5 E",186,255,65
+455,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_A","Right superior parietal 1 A",0,122,0
+456,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_B","Right superior parietal 1 B",0,122,0
+457,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_C","Right superior parietal 1 C",0,122,0
+458,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_D","Right superior parietal 1 D",0,122,0
+459,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_E","Right superior parietal 1 E",0,122,0
+460,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_F","Right superior parietal 1 F",0,122,0
+461,"Right","Parietal","Superior parietal","Superior parietal 1","R_P1_G","Right superior parietal 1 G",0,122,0
+462,"Right","Parietal","Superior parietal","Superior parietal 2","R_P2_A","Right superior parietal 2 A",0,150,0
+463,"Right","Parietal","Superior parietal","Superior parietal 2","R_P2_B","Right superior parietal 2 B",0,150,0
+464,"Right","Parietal","Superior parietal","Superior parietal 2","R_P2_C","Right superior parietal 2 C",0,150,0
+465,"Right","Parietal","Superior parietal","Superior parietal 2","R_P2_D","Right superior parietal 2 D",0,150,0
+466,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_A","Right superior parietal 3 A",0,176,0
+467,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_B","Right superior parietal 3 B",0,176,0
+468,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_C","Right superior parietal 3 C",0,176,0
+469,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_D","Right superior parietal 3 D",0,176,0
+470,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_E","Right superior parietal 3 E",0,176,0
+471,"Right","Parietal","Superior parietal","Superior parietal 3","R_P3_F","Right superior parietal 3 F",0,176,0
+472,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_A","Right superior parietal 4 A",0,203,0
+473,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_B","Right superior parietal 4 B",0,203,0
+474,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_C","Right superior parietal 4 C",0,203,0
+475,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_D","Right superior parietal 4 D",0,203,0
+476,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_E","Right superior parietal 4 E",0,203,0
+477,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_F","Right superior parietal 4 F",0,203,0
+478,"Right","Parietal","Superior parietal","Superior parietal 4","R_P4_G","Right superior parietal 4 G",0,203,0
+479,"Right","Parietal","Sensory","Somatosensory","R_S_A","Right somatosensory A",0,255,0
+480,"Right","Parietal","Sensory","Somatosensory","R_S_B","Right somatosensory B",0,255,0
+481,"Right","Parietal","Sensory","Somatosensory","R_S_C","Right somatosensory C",0,255,0
+482,"Right","Parietal","Sensory","Somatosensory","R_S_D","Right somatosensory D",0,255,0
+483,"Right","Parietal","Sensory","Somatosensory","R_S_E","Right somatosensory E",0,255,0
+484,"Right","Parietal","Sensory","Somatosensory","R_S_F","Right somatosensory F",0,255,0
+485,"Right","Parietal","Sensory","Somatosensory","R_S_G","Right somatosensory G",0,255,0
+486,"Right","Parietal","Sensory","Somatosensory","R_S_H","Right somatosensory H",0,255,0
+487,"Right","Parietal","Sensory","Somatosensory","R_S_I","Right somatosensory I",0,255,0
+488,"Right","Parietal","Sensory","Somatosensory","R_S_J","Right somatosensory J",0,255,0
+489,"Right","Parietal","Sensory","Somatosensory","R_S_K","Right somatosensory K",0,255,0
+490,"Right","Parietal","Sensory","Somatosensory","R_S_L","Right somatosensory L",0,255,0
+491,"Right","Parietal","Sensory","Somatosensory","R_S_M","Right somatosensory M",0,255,0
+492,"Right","Frontal","Motor","Motor","R_M1_A","Right anterior motor A",200,0,0
+493,"Right","Frontal","Motor","Motor","R_M1_B","Right anterior motor B",200,0,0
+494,"Right","Frontal","Motor","Motor","R_M1_C","Right anterior motor C",200,0,0
+495,"Right","Frontal","Motor","Motor","R_M1_D","Right anterior motor D",200,0,0
+496,"Right","Frontal","Motor","Motor","R_M2_A","Right posterior motor A",255,0,0
+497,"Right","Frontal","Motor","Motor","R_M2_B","Right posterior motor B",255,0,0
+498,"Right","Frontal","Motor","Motor","R_M2_C","Right posterior motor C",255,0,0
+499,"Right","Frontal","Motor","Motor","R_M2_D","Right posterior motor D",255,0,0
+500,"Right","Frontal","Motor","Motor","R_M2_E","Right posterior motor E",255,0,0
+501,"Right","Frontal","Motor","Motor","R_M2_F","Right posterior motor F",255,0,0
+502,"Right","Frontal","Motor","Motor","R_M2_G","Right posterior motor G",255,0,0
+503,"Right","Frontal","Motor","Motor","R_M2_H","Right posterior motor H",255,0,0
+504,"Right","Frontal","Motor","Motor","R_M2_I","Right posterior motor I",255,0,0
+505,"Right","Frontal","Motor","Motor","R_M2_J","Right posterior motor J",255,0,0
+506,"Right","Frontal","Motor","Motor","R_M2_K","Right posterior motor K",255,0,0
+507,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF1_A","Right superior frontal gyrus 1 A",104,5,0
+508,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF1_B","Right superior frontal gyrus 1 B",104,5,0
+509,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF1_C","Right superior frontal gyrus 1 C",104,5,0
+510,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF1_D","Right superior frontal gyrus 1 D",104,5,0
+511,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF2_A","Right superior frontal gyrus 2 A",117,3,0
+512,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF2_B","Right superior frontal gyrus 2 B",117,3,0
+513,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF2_C","Right superior frontal gyrus 2 C",117,3,0
+514,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF2_D","Right superior frontal gyrus 2 D",117,3,0
+515,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF3_A","Right superior frontal gyrus 3 A",131,2,0
+516,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF3_B","Right superior frontal gyrus 3 B",131,2,0
+517,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF3_C","Right superior frontal gyrus 3 C",131,2,0
+518,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF3_D","Right superior frontal gyrus 3 D",131,2,0
+519,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF4_A","Right superior frontal gyrus 4 A",149,0,0
+520,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF4_B","Right superior frontal gyrus 4 B",149,0,0
+521,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF4_C","Right superior frontal gyrus 4 C",149,0,0
+522,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF4_D","Right superior frontal gyrus 4 D",149,0,0
+523,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF5_A","Right superior frontal gyrus 5 A",167,0,0
+524,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF5_B","Right superior frontal gyrus 5 B",167,0,0
+525,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF5_C","Right superior frontal gyrus 5 C",167,0,0
+526,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF5_D","Right superior frontal gyrus 5 D",167,0,0
+527,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF6_A","Right superior frontal gyrus 6 A",181,0,0
+528,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF6_B","Right superior frontal gyrus 6 B",181,0,0
+529,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF6_C","Right superior frontal gyrus 6 C",181,0,0
+530,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF6_D","Right superior frontal gyrus 6 D",181,0,0
+531,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF7_A","Right superior frontal gyrus 7 A",190,0,0
+532,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF7_B","Right superior frontal gyrus 7 B",190,0,0
+533,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF7_C","Right superior frontal gyrus 7 C",190,0,0
+534,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF7_D","Right superior frontal gyrus 7 D",190,0,0
+535,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF7_E","Right superior frontal gyrus 7 E",190,0,0
+536,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF8_A","Right superior frontal gyrus 8 A",203,0,0
+537,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF8_B","Right superior frontal gyrus 8 B",203,0,0
+538,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF8_C","Right superior frontal gyrus 8 C",203,0,0
+539,"Right","Frontal","Superior frontal","Superior frontal gyrus","R_SF8_D","Right superior frontal gyrus 8 D",203,0,0
+540,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF1_A","Right middle frontal gyrus 1 A",255,16,16
+541,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF1_B","Right middle frontal gyrus 1 B",255,16,16
+542,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF1_C","Right middle frontal gyrus 1 C",255,16,16
+543,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF2_A","Right middle frontal gyrus 2 A",255,34,34
+544,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF2_B","Right middle frontal gyrus 2 B",255,34,34
+545,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF2_C","Right middle frontal gyrus 2 C",255,34,34
+546,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF2_D","Right middle frontal gyrus 2 D",255,34,34
+547,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF3_A","Right middle frontal gyrus 3 A",255,43,43
+548,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF3_B","Right middle frontal gyrus 3 B",255,43,43
+549,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF3_C","Right middle frontal gyrus 3 C",255,43,43
+550,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF3_D","Right middle frontal gyrus 3 D",255,43,43
+551,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF4_A","Right middle frontal gyrus 4 A",255,61,61
+552,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF4_B","Right middle frontal gyrus 4 B",255,61,61
+553,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF4_C","Right middle frontal gyrus 4 C",255,61,61
+554,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF4_D","Right middle frontal gyrus 4 D",255,61,61
+555,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF5_A","Right middle frontal gyrus 5 A",255,79,79
+556,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF5_B","Right middle frontal gyrus 5 B",255,79,79
+557,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF5_C","Right middle frontal gyrus 5 C",255,79,79
+558,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF6_A","Right middle frontal gyrus 6 A",255,93,93
+559,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF6_B","Right middle frontal gyrus 6 B",255,93,93
+560,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF6_C","Right middle frontal gyrus 6 C",255,93,93
+561,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF7_A","Right middle frontal gyrus 7 A",255,110,110
+562,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF7_B","Right middle frontal gyrus 7 B",255,110,110
+563,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF7_C","Right middle frontal gyrus 7 C",255,110,110
+564,"Right","Frontal","Middle frontal","Middle frontal gyrus","R_MF8_A","Right middle frontal gyrus 8 A",255,133,133
+565,"Right","Frontal","Inferior frontal","Pars opercularis","R_OP_A","Right pars opercularis A",255,133,164
+566,"Right","Frontal","Inferior frontal","Pars opercularis","R_OP_B","Right pars opercularis B",255,133,164
+567,"Right","Frontal","Inferior frontal","Pars opercularis","R_OP_C","Right pars opercularis C",255,133,164
+568,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR1_A","Right anterior pars triangularis A",255,84,132
+569,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR1_B","Right anterior pars triangularis B",255,84,132
+570,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR2_A","Right middle pars triangularis A",255,97,142
+571,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR2_B","Right middle pars triangularis B",255,97,142
+572,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR3_A","Right posterior pars triangularis A",255,102,151
+573,"Right","Frontal","Inferior frontal","Pars triangularis","R_TR3_B","Right posterior pars triangularis B",255,102,151
+574,"Right","Frontal","Inferior frontal","Pars orbitalis","R_OR_A","Right pars orbitalis A",255,79,126
+575,"Right","Frontal","Inferior frontal","Pars orbitalis","R_OR_B","Right pars orbitalis B",255,79,126
+576,"Right","Frontal","Inferior frontal","Pars orbitalis","R_OR_C","Right pars orbitalis C",255,79,126
+577,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_A","Right frontal pole 1 A",212,70,0
+578,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_B","Right frontal pole 1 B",212,73,0
+579,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_C","Right frontal pole 1 C",212,70,0
+580,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_D","Right frontal pole 1 D",212,70,0
+581,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_E","Right frontal pole 1 E",212,70,0
+582,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_F","Right frontal pole 1 F",212,70,0
+583,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_G","Right frontal pole 1 G",212,70,0
+584,"Right","Frontal","Frontal pole","Frontal pole 1","R_FP1_H","Right frontal pole 1 H",212,70,0
+585,"Right","Frontal","Frontal pole","Frontal pole 2","R_FP2_A","Right frontal pole 2 A",230,73,0
+586,"Right","Frontal","Frontal pole","Frontal pole 2","R_FP2_B","Right frontal pole 2 B",230,73,0
+587,"Right","Frontal","Frontal pole","Frontal pole 2","R_FP2_C","Right frontal pole 2 C",230,73,0
+588,"Right","Frontal","Frontal pole","Frontal pole 2","R_FP2_D","Right frontal pole 2 D",230,73,0
+589,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_A","Right frontal pole 3 A",255,81,0
+590,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_B","Right frontal pole 3 B",255,81,0
+591,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_C","Right frontal pole 3 C",255,81,0
+592,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_D","Right frontal pole 3 D",255,81,0
+593,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_E","Right frontal pole 3 E",255,81,0
+594,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_F","Right frontal pole 3 F",255,81,0
+595,"Right","Frontal","Frontal pole","Frontal pole 3","R_FP3_G","Right frontal pole 3 G",255,81,0
+596,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_A","Right frontal pole 4 A",255,98,25
+597,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_B","Right frontal pole 4 B",255,98,25
+598,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_C","Right frontal pole 4 C",255,98,25
+599,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_D","Right frontal pole 4 D",255,98,25
+600,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_E","Right frontal pole 4 E",255,98,25
+601,"Right","Frontal","Frontal pole","Frontal pole 4","R_FP4_F","Right frontal pole 4 F",255,98,25
+602,"Right","Frontal","Orbital frontal","Frontal orbital 1","R_FO1_A","Right orbitofrontal 1 A",255,171,52
+603,"Right","Frontal","Orbital frontal","Frontal orbital 1","R_FO1_B","Right orbitofrontal 1 B",255,171,52
+604,"Right","Frontal","Orbital frontal","Frontal orbital 1","R_FO1_C","Right orbitofrontal 1 C",255,171,52
+605,"Right","Frontal","Orbital frontal","Frontal orbital 1","R_FO1_D","Right orbitofrontal 1 D",255,171,52
+606,"Right","Frontal","Orbital frontal","Frontal orbital 2","R_FO2_A","Right orbitofrontal 2 A",255,182,79
+607,"Right","Frontal","Orbital frontal","Frontal orbital 2","R_FO2_B","Right orbitofrontal 2 B",255,182,79
+608,"Right","Frontal","Orbital frontal","Frontal orbital 2","R_FO2_C","Right orbitofrontal 2 C",255,182,79
+609,"Right","Frontal","Orbital frontal","Frontal orbital 2","R_FO2_D","Right orbitofrontal 2 D",255,182,79
+610,"Right","Frontal","Orbital frontal","Frontal orbital 2","R_FO2_E","Right orbitofrontal 2 E",255,182,79
+611,"Right","Frontal","Orbital frontal","Frontal orbital 3","R_FO3_A","Right orbitofrontal 3 A",255,193,106
+612,"Right","Frontal","Orbital frontal","Frontal orbital 3","R_FO3_B","Right orbitofrontal 3 B",255,193,106
+613,"Right","Frontal","Orbital frontal","Frontal orbital 3","R_FO3_C","Right orbitofrontal 3 C",255,193,106
+614,"Right","Frontal","Orbital frontal","Frontal orbital 3","R_FO3_D","Right orbitofrontal 3 D",255,193,106
+615,"Right","Frontal","Orbital frontal","Frontal orbital 4","R_FO4_A","Right orbitofrontal 4 A",255,201,124
+616,"Right","Frontal","Orbital frontal","Frontal orbital 4","R_FO4_B","Right orbitofrontal 4 B",255,201,124
+617,"Right","Frontal","Orbital frontal","Frontal orbital 4","R_FO4_C","Right orbitofrontal 4 C",255,201,124
+618,"Right","Frontal","Orbital frontal","Frontal orbital 4","R_FO4_D","Right orbitofrontal 4 D",255,201,124
+619,"Right","Frontal","Orbital frontal","Frontal orbital 5","R_FO5_A","Right orbitofrontal 5 A",255,201,124
+620,"Right","Frontal","Orbital frontal","Frontal orbital 5","R_FO5_B","Right orbitofrontal 5 B",255,201,124
+621,"Right","Frontal","Orbital frontal","Frontal orbital 5","R_FO5_C","Right orbitofrontal 5 C",255,201,124
+622,"Right","Frontal","Orbital frontal","Frontal orbital 5","R_FO5_D","Right orbitofrontal 5 D",255,201,124
+623,"Right","Frontal","Orbital frontal","Frontal orbital 5","R_FO5_E","Right orbitofrontal 5 E",255,201,124
+624,"Right","Frontal","Orbital frontal","Frontal orbital 6","R_FO6_A","Right orbitofrontal 6 A",255,220,170
+625,"Right","Frontal","Orbital frontal","Frontal orbital 6","R_FO6_B","Right orbitofrontal 6 B",255,220,170
+626,"Right","Frontal","Orbital frontal","Frontal orbital 6","R_FO6_C","Right orbitofrontal 6 C",255,220,170
+627,"Right","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","R_LOT_A","Right lateral occipitotemporal gyrus A",226,151,255
+628,"Right","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","R_LOT_B","Right lateral occipitotemporal gyrus B",226,151,255
+629,"Right","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","R_LOT_C","Right lateral occipitotemporal gyrus C",226,151,255
+630,"Right","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","R_LOT_D","Right lateral occipitotemporal gyrus D",226,151,255
+631,"Right","Temporal","Inferior temporal-occipital","Lateral occipitotemporal gyrus","R_LOT_E","Right lateral occipitotemporal gyrus E",226,151,255
+632,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_A","Right medial occipitotemporal gyrus A",172,120,255
+633,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_B","Right medial occipitotemporal gyrus B",172,120,255
+634,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_C","Right medial occipitotemporal gyrus C",172,120,255
+635,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_D","Right medial occipitotemporal gyrus D",172,120,255
+636,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_E","Right medial occipitotemporal gyrus E",172,120,255
+637,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_F","Right medial occipitotemporal gyrus F",172,120,255
+638,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_G","Right medial occipitotemporal gyrus G",172,120,255
+639,"Right","Temporal","Inferior temporal-occipital","Medial occipitotemporal gyrus","R_MOT_H","Right medial occipitotemporal gyrus H",172,120,255
+640,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_A","Right parahippocampal gyrus A",255,133,223
+641,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_B","Right parahippocampal gyrus B",255,133,223
+642,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_C","Right parahippocampal gyrus C",255,133,223
+643,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_D","Right parahippocampal gyrus D",255,133,223
+644,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_E","Right parahippocampal gyrus E",255,133,223
+645,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_F","Right parahippocampal gyrus F",255,133,223
+646,"Right","Temporal","Inferior temporal-occipital","Parahippocampal gyrus","R_PH_G","Right parahippocampal gyrus G",255,133,223
+647,"Right","Occipital","Inferior temporal-occipital","Lingual gyrus","R_L_A","Right lingual gyrus A",255,213,0
+648,"Right","Occipital","Inferior temporal-occipital","Lingual gyrus","R_L_B","Right lingual gyrus B",255,213,0
+649,"Right","Occipital","Inferior temporal-occipital","Lingual gyrus","R_L_C","Right lingual gyrus C",255,213,0
+650,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_A","Right cingulate gyrus A",181,69,174
+651,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_B","Right cingulate gyrus B",181,69,174
+652,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_C","Right cingulate gyrus C",181,69,174
+653,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_D","Right cingulate gyrus D",181,69,174
+654,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_E","Right cingulate gyrus E",181,69,174
+655,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_F","Right cingulate gyrus F",181,69,174
+656,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_G","Right cingulate gyrus G",181,69,174
+657,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_H","Right cingulate gyrus H",181,69,174
+658,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_I","Right cingulate gyrus I",181,69,174
+659,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_J","Right cingulate gyrus J",181,69,174
+660,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_K","Right cingulate gyrus K",181,69,174
+661,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_L","Right cingulate gyrus L",181,69,174
+662,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_M","Right cingulate gyrus M",181,69,174
+663,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_N.1","Right cingulate gyrus N superior",181,69,174
+664,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_N.2","Right cingulate gyrus N inferior",181,69,174
+665,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_O","Right cingulate gyrus O",181,69,174
+666,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_P","Right cingulate gyrus P",181,69,174
+667,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_Q","Right cingulate gyrus Q",181,69,174
+668,"Right","Frontal","Cingulate","Cingulate gyrus","R_CG_R","Right cingulate gyrus R",181,69,174
+669,"Right","Temporal","Medial temporal","Hippocampus","R_H_A","Right hippocampus pes",113,74,255
+670,"Right","Temporal","Medial temporal","Hippocampus","R_H_B","Right hippocampus body",113,74,255
+671,"Right","Temporal","Medial temporal","Hippocampus","R_H_C","Right hippocampus tail",113,74,255
+672,"Right","Temporal","Amygdala","Amygdala","R_A_A","Right amygdala superior",126,0,230
+673,"Right","Temporal","Amygdala","Amygdala","R_A_B","Right amygdala inferior",126,0,230
+674,"Right","Insula","Insula","Anterior short insular gyrus","R_I1_A","Right anterior short insular gyrus A",107,0,149
+675,"Right","Insula","Insula","Anterior short insular gyrus","R_I1_B","Right anterior short insular gyrus B",107,0,149
+676,"Right","Insula","Insula","Anterior short insular gyrus","R_I1_C","Right anterior short insular gyrus C",107,0,149
+677,"Right","Insula","Insula","Posterior short insular gyrus","R_I2_A","Right middle short insular gyrus A",126,0,176
+678,"Right","Insula","Insula","Posterior short insular gyrus","R_I2_B","Right middle short insular gyrus B",126,0,176
+679,"Right","Insula","Insula","Posterior short insular gyrus","R_I2_C","Right middle short insular gyrus C",126,0,176
+680,"Right","Insula","Insula","Anterior long insular gyrus","R_I3_A","Right posterior short insular gyrus A",155,0,221
+681,"Right","Insula","Insula","Anterior long insular gyrus","R_I3_B","Right posterior short insular gyrus B",155,0,221
+682,"Right","Insula","Insula","Anterior long insular gyrus","R_I3_C","Right posterior short insular gyrus C",155,0,221
+683,"Right","Insula","Insula","Middle long insular gyrus","R_I4_A","Right anterior long insular gyrus A",190,38,255
+684,"Right","Insula","Insula","Middle long insular gyrus","R_I4_B","Right anterior long insular gyrus B",190,38,255
+685,"Right","Insula","Insula","Middle long insular gyrus","R_I4_C","Right anterior long insular gyrus C",190,38,255
+686,"Right","Insula","Insula","Middle long insular gyrus","R_I4_D","Right anterior long insular gyrus D",190,38,255
+687,"Right","Insula","Insula","Posterior long insular gyrus","R_I5_A","Right posterior long insular gyrus A",211,106,255
+688,"Right","Insula","Insula","Posterior long insular gyrus","R_I5_B","Right posterior long insular gyrus B",211,106,255
+689,"Right","Insula","Insula","Posterior long insular gyrus","R_I5_C","Right posterior long insular gyrus C",211,106,255
+690,"Right","Insula","Insula","Posterior long insular gyrus","R_I5_D","Right posterior long insular gyrus D",211,106,255
