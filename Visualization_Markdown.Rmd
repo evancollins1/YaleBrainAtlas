@@ -65,9 +65,9 @@ color_parcels_by_data <- function(dataframe, column){
 
 ```{r}
 # Function to return list of 3D mesh interactive figures for whole, LH, RH, deep LH, and deep RH parcellated brains in Yale Brain Atlas space.
-# Input 1: R_values = 690-length vector of R color values for 696 parcels (on RGB scale)
-# Input 2: G_values = 690-length vector of G color values for 696 parcels (on RGB scale)
-# Input 3: B_values = 690-length vector of B color values for 696 parcels (on RGB scale)
+# Input 1: R_values = 690-length vector of R color values for 690 parcels (on RGB scale)
+# Input 2: G_values = 690-length vector of G color values for 690 parcels (on RGB scale)
+# Input 3: B_values = 690-length vector of B color values for 690 parcels (on RGB scale)
 # Input 4: extra_text_values_df = 690-length vector of any additional information to be displayed in hovertext for 690 parcels
 # Output: interactive_brain_list = list of three 3D interactive figures for whole, LH, and RH parcellated brains
 
