@@ -1,0 +1,232 @@
+---
+title: "Visualization Tutorial for Yale Brain Atlas (690 parcel version)"
+output: html_document
+---
+
+```{r}
+# All code written by Evan Collins
+# 14 February 2022, updated 12 February 2023, updated 7 July 2023, updated 24 January 2024
+# Any questions can be sent to evantomcollins@gmail.com
+```
+
+# Visualization Tutorial for Yale Brain Atlas (690 parcel version)
+
+```{r, warning = F, message = F}
+# Load packages
+library(dplyr)
+library(plotly)
+library(ggplot2)
+```
+
+```{r}
+# Load atlas files
+# Yale Brain Atlas whole brain positions and indices
+atlas_whole_positions <- read.csv("files/atlas_690/atlas_whole_positions.csv")
+atlas_whole_indices <- read.csv("files/atlas_690/atlas_whole_indices.csv")
+# Yale Brain Atlas left hemisphere positions and indices
+atlas_LH_positions <- read.csv("files/atlas_690/atlas_LH_positions.csv")
+atlas_LH_indices <- read.csv("files/atlas_690/atlas_LH_indices.csv")
+# Yale Brain Atlas right hemisphere positions and indices
+atlas_RH_positions <- read.csv("files/atlas_690/atlas_RH_positions.csv")
+atlas_RH_indices <- read.csv("files/atlas_690/atlas_RH_indices.csv")
+# Yale Brain Atlas deep left hemisphere (amygdala, hippocampus, insula) positions and indices
+atlas_deepLH_positions <- read.csv("files/atlas_690/atlas_deepLH_positions.csv")
+atlas_deepLH_indices <- read.csv("files/atlas_690/atlas_deepLH_indices.csv")
+# Yale Brain Atlas deep right hemisphere (amygdala, hippocampus, insula) positions and indices
+atlas_deepRH_positions <- read.csv("files/atlas_690/atlas_deepRH_positions.csv")
+atlas_deepRH_indices <- read.csv("files/atlas_690/atlas_deepRH_indices.csv")
+# Yale Brain Atlas parcel dictionary
+parcel_dict <- read.csv("files/atlas_690/parcel_dict.csv")
+
+# Coloring: Example data from Scientific Reports publication
+parcel_electrode_count <- read.csv("files/atlas_690/parcel_electrode_count_atlas690.csv")
+```
+
+```{r}
+# One example of how to compute RGB values for parcels
+# Function to return list of RGB colors assigned to each parcel (i.e., their component vertices) with color intensity reflecting magnitude of input data column
+
+# Input 1: dataframe = dataframe name with 690 rows corresponding to 690 parcels (first 345 should be left parcels; last 345 should be right parcels)
+# Input 2: column = column name with by parcel frequency data
+# Output: data_colors = list of three 690-length vectors with RGB colors for 690 parcels
+
+# Note: If all values in provided column are positive, gradient will be white to red.
+# Note: If all values in provided column are negative, gradient will be blue to white.
+# Note: If values in provided column are negative and positive, gradient will be blue to white to red.
+
+color_parcels_by_data <- function(dataframe, column){
+  column_number <- which(colnames(dataframe) == column)
+  data_colors_R <- col2rgb(ggplot_build(ggplot(dataframe, aes(x=as.numeric(dataframe[,column_number]), y=as.numeric(dataframe[,column_number]), color=as.numeric(dataframe[,column_number]))) + geom_point() + scale_color_gradientn(limits = c(-pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number])))), pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number]))))), colors = c("blue", "white", "red")))$data[[1]][[1]])[1,]
+  data_colors_G <- col2rgb(ggplot_build(ggplot(dataframe, aes(x=as.numeric(dataframe[,column_number]), y=as.numeric(dataframe[,column_number]), color=as.numeric(dataframe[,column_number]))) + geom_point() + scale_color_gradientn(limits = c(-pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number])))), pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number]))))), colors = c("blue", "white", "red")))$data[[1]][[1]])[2,]
+  data_colors_B <- col2rgb(ggplot_build(ggplot(dataframe, aes(x=as.numeric(dataframe[,column_number]), y=as.numeric(dataframe[,column_number]), color=as.numeric(dataframe[,column_number]))) + geom_point() + scale_color_gradientn(limits = c(-pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number])))), pmax(abs(min(as.numeric(dataframe[,column_number]))), abs(max(as.numeric(dataframe[,column_number]))))), colors = c("blue", "white", "red")))$data[[1]][[1]])[3,]
+  data_colors <- list(data_colors_R, data_colors_G, data_colors_B)
+  return(data_colors)
+}
+```
+
+```{r}
+# Function to return list of 3D mesh interactive figures for whole, LH, RH, deep LH, and deep RH parcellated brains in Yale Brain Atlas space.
+# Input 1: R_values = 690-length vector of R color values for 690 parcels (on RGB scale)
+# Input 2: G_values = 690-length vector of G color values for 690 parcels (on RGB scale)
+# Input 3: B_values = 690-length vector of B color values for 690 parcels (on RGB scale)
+# Input 4: brain_section = "whole", "LH", "RH", "deepLH", or "deepRH" to select part of the brain to visualize
+# Input 5: extra_text_varname = user-defined label for variable title for hovertext; will be displayed with extra_text_values
+# Input 6: extra_text_values = 690-length vector of any additional information to be displayed in hovertext for 690 parcels
+# Input 7: hide_axes = TRUE or FALSE to show or hide axes in plot
+# Output: interactive_brain_list = list of three 3D interactive figures for whole, LH, and RH parcellated brains
+
+# Function to generate 3D plot of Yale Brain Atlas
+plot_brain_3d <- function(R_values = parcel_dict$YBA_R_color, G_values = parcel_dict$YBA_G_color, B_values = parcel_dict$YBA_B_color, brain_section = "whole", extra_text_varname = "Region", extra_text_values = parcel_dict$Region, hide_axes = TRUE) {
+
+  stopifnot("R_values must be a vector of length 690 containing numeric or integer values on the RGB scale from 0 to 255." = is.null(R_values) | (is.vector(R_values) & (all(is.numeric(R_values) | is.integer(R_values))) & (length(R_values) == 690) & all(R_values >= 0 & R_values <= 255)))
+  stopifnot("G_values must be a vector of length 690 containing numeric or integer values on the RGB scale from 0 to 255." = is.null(G_values) | (is.vector(G_values) & (all(is.numeric(G_values) | is.integer(G_values))) & (length(G_values) == 690) & all(G_values >= 0 & G_values <= 255)))
+  stopifnot("B_values must be a vector of length 690 containing numeric or integer values on the RGB scale from 0 to 255." = is.null(B_values) | (is.vector(B_values) & (all(is.numeric(B_values) | is.integer(B_values))) & (length(B_values) == 690) & all(B_values >= 0 & B_values <= 255)))
+  stopifnot("brain_section must be either 'whole', 'LH', 'RH', 'deepLH', or 'deepRH' as a single character element." = (is.character(brain_section) & (brain_section %in% c('whole', 'LH', 'RH', 'deepLH', 'deepRH'))))
+  stopifnot("extra_text_varname must be a single character element." = is.null(extra_text_varname) | (is.character(extra_text_varname) & (length(extra_text_varname) == 1)))
+  stopifnot("extra_text_values must be a vector of length 690." = is.null(extra_text_values) | (is.vector(extra_text_values) & (length(extra_text_values) == 690)))
+  stopifnot("hide_axes must be either TRUE (1) or FALSE (0)." = hide_axes == TRUE | hide_axes == FALSE)
+
+  if (brain_section == "whole"){
+    atlas_section_positions <- atlas_whole_positions
+    atlas_section_indices <- atlas_whole_indices
+  } else if (brain_section == "LH"){
+    atlas_section_positions <- atlas_LH_positions
+    atlas_section_indices <- atlas_LH_indices
+  } else if (brain_section == "RH"){
+    atlas_section_positions <- atlas_RH_positions
+    atlas_section_indices <- atlas_RH_indices
+  } else if (brain_section == "deepLH"){
+    atlas_section_positions <- atlas_deepLH_positions
+    atlas_section_indices <- atlas_deepLH_indices
+  } else if (brain_section == "deepRH"){
+    atlas_section_positions <- atlas_deepRH_positions
+    atlas_section_indices <- atlas_deepRH_indices
+  }
+
+  brain_3d <- plot_ly(
+    type = "mesh3d",
+    x = atlas_section_positions$x,
+    y = atlas_section_positions$y,
+    z = atlas_section_positions$z,
+    vertexcolor = rep(
+      rgb(R_values[which(parcel_dict[,brain_section] == 1)]/255, G_values[which(parcel_dict[,brain_section] == 1)]/255, B_values[which(parcel_dict[,brain_section] == 1)]/255, 1), parcel_dict$Num_vertex[which(parcel_dict[,brain_section] == 1)]),
+    opacity = 1,
+    i = atlas_section_indices$i,
+    j = atlas_section_indices$j,
+    k = atlas_section_indices$k,
+    hovertext = paste0(
+      "Parcel: ",
+      rep(parcel_dict$Name[which(parcel_dict[,brain_section] == 1)], parcel_dict$Num_vertex[which(parcel_dict[,brain_section] == 1)]),
+      "<br>", extra_text_varname,": ",
+      rep(extra_text_values[which(parcel_dict[,brain_section] == 1)], parcel_dict$Num_vertex[which(parcel_dict[,brain_section] == 1)])
+    )
+  ) %>%
+    layout(hoverlabel = list(
+      bgcolor = "white",
+      bordercolor = "darkblue",
+      font = list(size = 15, family = "Verdana")
+    )) %>%
+    config(displaylogo = F, displayModeBar = T) %>%
+    layout(scene = list(camera = list(
+      eye = list(x = 1.5, y = 0, z = 0),
+      up = list(x = 0, y = 0, z = 1),
+      center = list(x = 0, y = 0, z = 0)
+    )))
+
+  if (hide_axes == TRUE){
+    brain_3d <- brain_3d %>%
+      layout(scene = list(xaxis = list(visible = FALSE),
+                          yaxis = list(visible = FALSE),
+                          zaxis = list(visible = FALSE)))
+  }
+
+  return(brain_3d)
+}
+```
+
+
+# Get R, G, B, colors based on example data
+
+```{r}
+# for electrode count data
+parcel_electrode_count_colors <- color_parcels_by_data(parcel_electrode_count, "freq")
+```
+
+# Visualizations - Default Yale Brain Atlas colors
+
+```{r}
+# Whole brain
+plot_brain_3d()
+```
+
+```{r}
+# LH
+plot_brain_3d(brain_section = "LH")
+```
+
+```{r}
+# RH
+plot_brain_3d(brain_section = "RH")
+```
+
+```{r}
+# deep LH (amygdala, insula, hippocampus)
+plot_brain_3d(brain_section = "deepLH")
+```
+
+```{r}
+# deep RH (amygdala, insula, hippocampus)
+plot_brain_3d(brain_section = "deepRH")
+```
+
+
+# Visualizations - Electrode count example
+
+```{r}
+# Whole brain
+plot_brain_3d(
+  R_values = parcel_electrode_count_colors[[1]],
+  G_values = parcel_electrode_count_colors[[2]],
+  B_values = parcel_electrode_count_colors[[3]]
+)
+```
+
+```{r}
+# LH
+plot_brain_3d(
+  R_values = parcel_electrode_count_colors[[1]],
+  G_values = parcel_electrode_count_colors[[2]],
+  B_values = parcel_electrode_count_colors[[3]],
+  brain_section = "LH"
+)
+```
+
+```{r}
+# RH
+plot_brain_3d(
+  R_values = parcel_electrode_count_colors[[1]],
+  G_values = parcel_electrode_count_colors[[2]],
+  B_values = parcel_electrode_count_colors[[3]],
+  brain_section = "RH"
+)
+```
+
+```{r}
+# deep LH
+plot_brain_3d(
+  R_values = parcel_electrode_count_colors[[1]],
+  G_values = parcel_electrode_count_colors[[2]],
+  B_values = parcel_electrode_count_colors[[3]],
+  brain_section = "deepLH"
+)
+```
+
+```{r}
+plot_brain_3d(
+  R_values = parcel_electrode_count_colors[[1]],
+  G_values = parcel_electrode_count_colors[[2]],
+  B_values = parcel_electrode_count_colors[[3]],
+  brain_section = "deepRH"
+)
+```
+
